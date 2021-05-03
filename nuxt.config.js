@@ -14,8 +14,13 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylsheet',
+        href:
+          'https://api.fontshare.com/css?f[]=satoshi@300,400,500,700&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -35,7 +40,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+    scss: ['~assets/global.scss'],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
