@@ -1,11 +1,17 @@
 <template>
   <div class="home-page">
     <Home />
+    <Services />
+    <Facilities />
+    <About />
   </div>
 </template>
 
 <script>
+import Services from '~/components/Services.vue'
+import Facilities from '~/components/Facilities.vue'
 export default {
+  components: { Services, Facilities },
   name: 'HomePage',
 }
 </script>

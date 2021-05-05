@@ -40,15 +40,18 @@ export default {
   .content {
     width: 366px;
     position: absolute;
-    left: 135px;
+    left: 157px;
     top: 148px;
+    @include for-phone-only {
+      left: 15px;
+    }
     h1 {
       font-size: 48px;
       line-height: 114.5%;
       font-weight: 700;
       padding-bottom: 35px;
       background: linear-gradient(180deg, #000000 0%, #0087d2 100%);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .appointment-btn {

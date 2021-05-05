@@ -23,10 +23,10 @@ export default {
   data() {
     return {
       menus: [
-        { name: 'Services', path: '/' },
-        { name: 'About', path: '/' },
-        { name: 'Facilities', path: '/' },
-        { name: 'Contact', path: '/' },
+        { name: 'Services', path: '#services' },
+        { name: 'About', path: '#about' },
+        { name: 'Facilities', path: '#facilities' },
+        { name: 'Contact', path: '#footer' },
       ],
     }
   },
@@ -37,8 +37,11 @@ export default {
 #toolbar {
   position: fixed;
   top: 40px;
-  left: 135px;
+  left: 157px;
   z-index: 999;
+  @include for-phone-only {
+    display: none;
+  }
   .container {
     display: flex;
     justify-content: flex-end;
@@ -68,7 +71,16 @@ export default {
             font-weight: 500;
             font-size: 16px;
             line-height: 24px;
+            transition: 0.3s ease all;
+            &:hover {
+              background: linear-gradient(to bottom, #000000 0%, #0079be 100%);
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
             &.nuxt-link-exact-active {
+              background: linear-gradient(to bottom, #000000 0%, #0079be 100%);
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
               &::after {
                 content: '';
                 width: 8px;

@@ -1,0 +1,151 @@
+<template>
+  <div id="facilities">
+    <div class="custom-shape-divider-top-1620213850">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
+    <div class="overlay"></div>
+    <div class="title">
+      <h4>Facilities At Our Clinic</h4>
+    </div>
+    <div class="card-container">
+      <div class="card" v-for="(item, i) in facelities" :key="i">
+        <div class="top">
+          <img :src="item.icon" :alt="item.name" />
+        </div>
+        <div class="bottom">
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'FacilitiesComponent',
+  data() {
+    return {
+      facelities: [
+        { name: 'X-Ray Facility', icon: '/xray.svg' },
+        {
+          name: 'Use of disposable gloves, mouth mask, disposable syrings',
+          icon: '/gloves.svg',
+        },
+        {
+          name: 'Autoclave sterilization of all instruments.',
+          icon: '/instruments.svg',
+        },
+        { name: 'Intra oral camera facility', icon: '/camera.svg' },
+        { name: 'Comfortable, Friendly ambience', icon: '/ambience.svg' },
+        { name: 'Prior appointment facility over phone', icon: '/call.svg' },
+      ],
+    }
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+#facilities {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('/facility-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+  padding-bottom: 65px;
+  .custom-shape-divider-top-1620213850 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1620213850 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 75px;
+  }
+
+  .custom-shape-divider-top-1620213850 .shape-fill {
+    fill: #ffffff;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #70d2ff 0%, #ffffff 100%);
+    opacity: 0.7;
+    z-index: -1;
+  }
+  .title {
+    padding-top: 130px;
+    text-align: center;
+    margin-bottom: 66px;
+    h4 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 37px;
+      letter-spacing: 0.035em;
+    }
+  }
+  .card-container {
+    padding: 0 157px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1245px;
+    margin: 0 auto;
+    @include for-phone-only {
+      padding: 0 15px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+    .card {
+      width: 100%;
+      max-width: 289px;
+      height: 100%;
+      @include for-phone-only {
+        max-width: 100%;
+      }
+      .top {
+        background: #fbfbfb;
+        height: 194px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 75px;
+          height: 75px;
+          object-fit: contain;
+        }
+      }
+      .bottom {
+        background: #fff;
+        height: 194px;
+        padding: 23px 42px;
+        p {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0.035em;
+        }
+      }
+    }
+  }
+}
+</style>
