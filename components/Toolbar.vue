@@ -7,7 +7,7 @@
         </nuxt-link>
       </div>
       <div class="nav-menu">
-        <ul>
+        <ul :class="{ 'hidden-navbar': !showNavbar }">
           <li v-for="(item, i) in menus" :key="i">
             <nuxt-link :to="item.path">{{ item.name }}</nuxt-link>
           </li>
@@ -21,10 +21,27 @@
 import { menus } from '@/utils'
 export default {
   name: 'Toolbar',
-
+  data() {
+    return {
+      lastScrollPosition: 0,
+      showNavbar: true,
+    }
+  },
   computed: {
     menus() {
       return menus
+    },
+    scrollPosition: function () {
+      return this.$store.getters.getScrollPosition
+    },
+  },
+  watch: {
+    scrollPosition: function () {
+      if (this.scrollPosition < 0) {
+        return
+      }
+      this.showNavbar = this.scrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = this.scrollPosition
     },
   },
 }
@@ -96,6 +113,10 @@ export default {
         }
       }
     }
+  }
+  .hidden-navbar {
+    opacity: 0;
+    transition: 0.3s ease all;
   }
 }
 </style>

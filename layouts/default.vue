@@ -21,6 +21,11 @@ export default {
       menuState: false,
     }
   },
+  mounted() {
+    window.addEventListener('scroll', (e) => {
+      this.$store.commit('SET_SCROLL_POSITION', parseInt(window.scrollY))
+    })
+  },
   computed: {
     storeMenuState: function () {
       return this.$store.getters.getMenuState
