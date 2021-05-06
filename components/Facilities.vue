@@ -31,25 +31,14 @@
 </template>
 
 <script>
+import { facelities } from '@/utils'
 export default {
   name: 'FacilitiesComponent',
-  data() {
-    return {
-      facelities: [
-        { name: 'X-Ray Facility', icon: '/xray.svg' },
-        {
-          name: 'Use of disposable gloves, mouth mask, disposable syrings',
-          icon: '/gloves.svg',
-        },
-        {
-          name: 'Autoclave sterilization of all instruments.',
-          icon: '/instruments.svg',
-        },
-        { name: 'Intra oral camera facility', icon: '/camera.svg' },
-        { name: 'Comfortable, Friendly ambience', icon: '/ambience.svg' },
-        { name: 'Prior appointment facility over phone', icon: '/call.svg' },
-      ],
-    }
+
+  computed: {
+    facelities() {
+      return facelities
+    },
   },
 }
 </script>
@@ -65,6 +54,9 @@ export default {
   background-size: cover;
   z-index: -2;
   padding-bottom: 65px;
+  @include for-phone-only {
+    padding-bottom: 40px;
+  }
   .custom-shape-divider-top-1620213850 {
     position: absolute;
     top: 0;
@@ -96,6 +88,10 @@ export default {
     padding-top: 130px;
     text-align: center;
     margin-bottom: 66px;
+    @include for-phone-only {
+      padding-top: 110px;
+      margin-bottom: 24px;
+    }
     h4 {
       font-weight: 500;
       font-size: 24px;
@@ -114,6 +110,11 @@ export default {
       padding: 0 15px;
       grid-template-columns: repeat(1, 1fr);
       gap: 15px;
+    }
+    @include for-tablet-only {
+      padding: 0 70px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
     .card {
       width: 100%;

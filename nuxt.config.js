@@ -1,17 +1,20 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'speciality-clinic-nuxt',
+    title: 'speciality clinic',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Be true to your teeth and they wont be false to you!' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

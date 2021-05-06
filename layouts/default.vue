@@ -1,12 +1,39 @@
 <template>
   <div>
     <Toolbar />
+    <transition name="slide">
+      <PhoneToolbar v-if="menuState" />
+    </transition>
+    <div
+      v-if="menuState"
+      class="menuModal"
+      @click="$store.commit('toggleMenuState')"
+    ></div>
+    <MobileNav />
     <Nuxt />
     <Footer />
   </div>
 </template>
-
-<style>
+<script>
+export default {
+  data() {
+    return {
+      menuState: false,
+    }
+  },
+  computed: {
+    storeMenuState: function () {
+      return this.$store.getters.getMenuState
+    },
+  },
+  watch: {
+    storeMenuState: function (newState) {
+      this.menuState = newState
+    },
+  },
+}
+</script>
+<style >
 html {
   font-family: 'Satoshi', sans-serif;
   font-size: 16px;
@@ -27,10 +54,28 @@ a {
   color: #000;
 }
 
+.menuModal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: transparent;
+  top: 0;
+  left: 0;
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.5, 1);
+}
+.slide-enter,
+.slide-leave-active {
+  transform: translateX(100%);
 }
 </style>

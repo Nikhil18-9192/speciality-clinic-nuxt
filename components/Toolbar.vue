@@ -18,17 +18,14 @@
 </template>
 
 <script>
+import { menus } from '@/utils'
 export default {
   name: 'Toolbar',
-  data() {
-    return {
-      menus: [
-        { name: 'Services', path: '#services' },
-        { name: 'About', path: '#about' },
-        { name: 'Facilities', path: '#facilities' },
-        { name: 'Contact', path: '#footer' },
-      ],
-    }
+
+  computed: {
+    menus() {
+      return menus
+    },
   },
 }
 </script>
@@ -41,6 +38,9 @@ export default {
   z-index: 999;
   @include for-phone-only {
     display: none;
+  }
+  @include for-tablet-only {
+    left: 70px;
   }
   .container {
     display: flex;
@@ -66,6 +66,7 @@ export default {
         padding: 0;
         li {
           margin-right: 56px;
+          height: 100%;
           a {
             position: relative;
             font-weight: 500;

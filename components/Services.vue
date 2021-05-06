@@ -122,18 +122,14 @@
 </template>
 
 <script>
+import { servicesList } from '@/utils'
 export default {
   name: 'ServicesComponent',
-  data() {
-    return {
-      lists: [
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        ' Lacus pretium diam molestie enim et augue potenti amet phasellus',
-        ' Eu libero non non accumsan ultrices eu. Aliquet lacus tristique nulla sapien ante.',
-        'Adipiscing faucibus ultricies risus, et, vel.',
-        'Adipiscing faucibus ultricies risus, et, vel.',
-      ],
-    }
+
+  computed: {
+    lists() {
+      return servicesList
+    },
   },
 }
 </script>
@@ -148,6 +144,14 @@ export default {
     text-align: center;
     padding-top: 68px;
     padding-bottom: 80px;
+    @include for-phone-only {
+      padding-top: 24px;
+      padding-bottom: 40px;
+    }
+    @include for-tablet-only {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
     h4 {
       font-weight: 500;
       font-size: 28px;
@@ -162,6 +166,12 @@ export default {
     @include for-phone-only {
       padding-left: 15px;
       padding-right: 15px;
+      padding-bottom: 40px;
+    }
+    @include for-tablet-only {
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-bottom: 40px;
     }
     .container {
       display: flex;
@@ -169,9 +179,15 @@ export default {
       @include for-phone-only {
         flex-direction: column;
       }
+      @include for-tablet-only {
+        flex-direction: column;
+      }
       .left {
         width: 35%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         h4 {
@@ -180,6 +196,7 @@ export default {
           margin-bottom: 40px;
           @include for-phone-only {
             font-size: 28px;
+            margin-bottom: 24px;
           }
           span {
             font-size: 14px;
@@ -213,6 +230,10 @@ export default {
           width: 100%;
           margin-left: 0;
         }
+        @include for-tablet-only {
+          width: 100%;
+          margin-left: 0;
+        }
       }
     }
   }
@@ -220,12 +241,18 @@ export default {
     padding: 81px 157px;
     background: #f2fbff;
     @include for-phone-only {
-      padding: 81px 15px;
+      padding: 20px 15px;
+    }
+    @include for-tablet-only {
+      padding: 40px 70px;
     }
     .container {
       display: flex;
       width: 100%;
       @include for-phone-only {
+        flex-direction: column-reverse;
+      }
+      @include for-tablet-only {
         flex-direction: column-reverse;
       }
       .left {
@@ -235,11 +262,19 @@ export default {
         margin-right: 75px;
         @include for-phone-only {
           width: 100%;
+          margin-right: 0;
+        }
+        @include for-tablet-only {
+          width: 100%;
+          margin-right: 0;
         }
       }
       .right {
         width: 35%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         h4 {
@@ -249,6 +284,10 @@ export default {
           text-align: right;
           @include for-phone-only {
             font-size: 28px;
+            text-align: left;
+            margin-bottom: 24px;
+          }
+          @include for-tablet-only {
             text-align: left;
           }
         }
@@ -276,7 +315,10 @@ export default {
   .section-three {
     padding: 85px 157px;
     @include for-phone-only {
-      padding: 85px 15px;
+      padding: 24px 15px;
+    }
+    @include for-tablet-only {
+      padding: 40px 70px;
     }
     .container {
       display: flex;
@@ -284,9 +326,15 @@ export default {
       @include for-phone-only {
         flex-direction: column;
       }
+      @include for-tablet-only {
+        flex-direction: column;
+      }
       .left {
         width: 40%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         h4 {
@@ -295,6 +343,7 @@ export default {
           margin-bottom: 40px;
           @include for-phone-only {
             font-size: 28px;
+            margin-bottom: 24px;
           }
           span {
             font-size: 14px;
@@ -330,6 +379,11 @@ export default {
         align-items: flex-end;
         @include for-phone-only {
           width: 100%;
+          padding-left: 0;
+        }
+        @include for-tablet-only {
+          width: 100%;
+          padding-left: 0;
         }
         .image-container {
           display: flex;
@@ -337,11 +391,20 @@ export default {
             border: 1px solid #c1c1c1;
             padding: 20px;
             margin-right: 24px;
+            @include for-phone-only {
+              margin-right: 0;
+            }
+            @include for-tablet-only {
+              margin-right: 0;
+            }
             img {
               width: 676px;
               height: 234px;
               object-fit: cover;
               @include for-phone-only {
+                width: 100%;
+              }
+              @include for-tablet-only {
                 width: 100%;
               }
             }
@@ -354,12 +417,18 @@ export default {
     padding: 81px 157px;
     background: #f2fbff;
     @include for-phone-only {
-      padding: 81px 15px;
+      padding: 24px 15px;
+    }
+    @include for-tablet-only {
+      padding: 40px 70px;
     }
     .container {
       display: flex;
       width: 100%;
       @include for-phone-only {
+        flex-direction: column-reverse;
+      }
+      @include for-tablet-only {
         flex-direction: column-reverse;
       }
       .left {
@@ -370,11 +439,20 @@ export default {
         margin-top: 50px;
         @include for-phone-only {
           width: 100%;
+          margin-right: 0;
+          margin-top: 24px;
+        }
+        @include for-tablet-only {
+          width: 100%;
+          margin-right: 0;
         }
       }
       .right {
         width: 35%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         h4 {
@@ -383,6 +461,7 @@ export default {
           margin-bottom: 40px;
           @include for-phone-only {
             font-size: 28px;
+            margin-bottom: 24px;
           }
           span {
             font-size: 14px;
@@ -424,7 +503,10 @@ export default {
   .section-five {
     padding: 85px 157px;
     @include for-phone-only {
-      padding: 85px 15px;
+      padding: 24px 15px;
+    }
+    @include for-tablet-only {
+      padding: 40px 70px;
     }
     .container {
       display: flex;
@@ -432,9 +514,15 @@ export default {
       @include for-phone-only {
         flex-direction: column;
       }
+      @include for-tablet-only {
+        flex-direction: column;
+      }
       .left {
         width: 35%;
         @include for-phone-only {
+          width: 100%;
+        }
+        @include for-tablet-only {
           width: 100%;
         }
         h4 {
@@ -443,6 +531,7 @@ export default {
           margin-bottom: 40px;
           @include for-phone-only {
             font-size: 28px;
+            margin-bottom: 24px;
           }
         }
         ul {
@@ -477,16 +566,25 @@ export default {
           width: 100%;
           margin-left: 0;
         }
+        @include for-tablet-only {
+          width: 100%;
+          margin-left: 0;
+        }
       }
     }
   }
 }
 .image-container {
   display: flex;
+  width: 100%;
   @include for-phone-only {
     flex-direction: column;
     row-gap: 15px;
   }
+  @include for-tablet-only {
+    column-gap: 24px;
+  }
+
   .image {
     border: 1px solid #c1c1c1;
     padding: 20px;
@@ -495,12 +593,18 @@ export default {
     @include for-phone-only {
       margin-right: 0;
     }
+    @include for-tablet-only {
+      margin-right: 0;
+    }
     img {
       width: 282px;
       height: 276px;
       object-fit: cover;
       @include for-phone-only {
         width: 100%;
+      }
+      @include for-tablet-only {
+        width: 260px;
       }
     }
   }

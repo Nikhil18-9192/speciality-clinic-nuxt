@@ -17,38 +17,14 @@
 </template>
 
 <script>
+import { treatments } from '@/utils'
 export default {
   name: 'AboutComponent',
-  data() {
-    return {
-      treatments: [
-        {
-          name:
-            'Detailed Examination, discussion of various treatment modalities with diagnostic models, photographs',
-          icon: '/examine.svg',
-        },
-        {
-          name: 'Tooth Fillings- silver, tooth colored',
-          icon: '/tooth-filling.svg',
-        },
-        {
-          name: 'Teeth removal, impacted teeth removal',
-          icon: '/removal-tongs.svg',
-        },
-        {
-          name: 'Complete denture, removable partial dentures, implants',
-          icon: '/teeth.svg',
-        },
-        {
-          name: 'Surgical procedures like frenectomy,vestibuloplasty',
-          icon: '/dental-drill.svg',
-        },
-        {
-          name: 'Dental treatments for children and all.',
-          icon: '/teeth1.svg',
-        },
-      ],
-    }
+
+  computed: {
+    treatments() {
+      return treatments
+    },
   },
 }
 </script>
@@ -60,11 +36,20 @@ export default {
   height: 100%;
   padding: 50px 157px 134px 157px;
   @include for-phone-only {
-    padding: 50px 15px;
+    padding: 24px 15px;
+  }
+  @include for-tablet-only {
+    padding: 50px 70px 50px 70px;
   }
   .title {
     text-align: center;
     margin-bottom: 76px;
+    @include for-phone-only {
+      margin-bottom: 40px;
+    }
+    @include for-tablet-only {
+      margin-bottom: 50px;
+    }
     h4 {
       font-weight: 500;
       font-size: 28px;
@@ -82,10 +67,16 @@ export default {
       grid-template-columns: repeat(1, 1fr);
       gap: 55px;
     }
+    @include for-tablet-only {
+      gap: 30px;
+    }
     .treatment {
       display: flex;
       .icon {
         padding-right: 52px;
+        @include for-tablet-only {
+          padding-right: 20px;
+        }
         img {
           width: 66px;
           height: 66px;
@@ -95,6 +86,9 @@ export default {
       .text {
         width: 243px;
         @include for-phone-only {
+          width: 225px;
+        }
+        @include for-tablet-only {
           width: 225px;
         }
       }

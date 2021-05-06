@@ -5,13 +5,13 @@
       Shahupuri 2nd Lane, Kolhapur -410 001
     </p>
     <div class="contact">
-      <span class="email"
-        ><a href="mailto:drdppatil@gmail.com">drdppatil@gmail.com</a></span
-      >
-      <span class="phone"
-        >For Appointment :
-        <a class="number" href="tel:9673310995">967 331 0995</a></span
-      >
+      <div class="email">
+        <a href="mailto:drdppatil@gmail.com">drdppatil@gmail.com</a>
+      </div>
+      <div class="phone">
+        For Appointment :
+        <a class="number" href="tel:9673310995">967 331 0995</a>
+      </div>
     </div>
     <div class="copyright">
       <p>Copyright 2021 . All Rights Reserved</p>
@@ -43,15 +43,20 @@ export default {
     letter-spacing: 0.035em;
   }
   .contact {
-    span {
+    display: flex;
+    justify-content: center;
+    @include for-phone-only {
+      flex-direction: column;
+    }
+    div {
       font-weight: 500;
       font-size: 16px;
       line-height: 40px;
       letter-spacing: 0.035em;
-      margin-right: 55px;
+      margin-left: 55px;
       @include for-phone-only {
-        margin-right: 0;
         width: 100%;
+        margin-left: 0;
       }
       a {
         text-decoration: none;
@@ -65,6 +70,9 @@ export default {
     margin-top: 107px;
     @include for-phone-only {
       margin-top: 50px;
+    }
+    @include for-tablet-only {
+      margin-top: 65px;
     }
     p {
       font-weight: 500;

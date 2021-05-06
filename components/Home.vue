@@ -3,7 +3,7 @@
     <div class="overlay"></div>
     <div class="content">
       <h1>Be true to your teeth and they won't be false to you!</h1>
-      <a class="appointment-btn" href="/">
+      <a class="appointment-btn" href="tel:9673310995">
         <img src="/phone.svg" alt="phone icon" />
         <p>Get Appointment</p>
       </a>
@@ -26,7 +26,9 @@ export default {
   background-position: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-
+  @include for-phone-only {
+    height: 385px;
+  }
   .overlay {
     position: absolute;
     width: 100%;
@@ -38,12 +40,16 @@ export default {
     );
   }
   .content {
-    width: 366px;
+    max-width: 366px;
     position: absolute;
     left: 157px;
     top: 148px;
     @include for-phone-only {
       left: 15px;
+      top: 120px;
+    }
+    @include for-tablet-only {
+      left: 70px;
     }
     h1 {
       font-size: 48px;
@@ -53,6 +59,9 @@ export default {
       background: linear-gradient(180deg, #000000 0%, #0087d2 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      @include for-phone-only {
+        font-size: 36px;
+      }
     }
     .appointment-btn {
       display: flex;
