@@ -1,6 +1,7 @@
 export const state = () => ({
     menuState: false,
     scrollPosition: 0,
+    toggle: false
 })
 
 export const getters = {
@@ -19,4 +20,8 @@ export const mutations = {
     SET_SCROLL_POSITION: (state, position) => {
         state.scrollPosition = position;
     },
+}
+
+export const actions = {
+
 }

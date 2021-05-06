@@ -2,6 +2,7 @@ const menus = [
     { name: 'Services', path: '#services' },
     { name: 'Facilities', path: '#facilities' },
     { name: 'About', path: '#about' },
+    { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '#footer' },
 ]
 
@@ -56,4 +57,6 @@ const servicesList = [
     'Adipiscing faucibus ultricies risus, et, vel.',
 ]
 
-export { menus, facelities, treatments, servicesList }
+const galleryImages = ['/beautiful-young-woman.jpg', '/woman-looking-mirror.jpg', '/esthetic1.jpg', '/esthetic2.jpg', '/beautiful-young-woman.jpg', '/woman-looking-mirror.jpg']
+
+export { menus, facelities, treatments, servicesList, galleryImages }
