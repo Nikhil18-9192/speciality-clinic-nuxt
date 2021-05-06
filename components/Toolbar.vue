@@ -81,6 +81,7 @@ export default {
         justify-content: center;
         align-items: center;
         padding: 0;
+        transition: 0.3s ease all;
         li {
           margin-right: 56px;
           height: 100%;
@@ -116,7 +117,6 @@ export default {
   }
   .hidden-navbar {
     opacity: 0;
-    transition: 0.3s ease all;
   }
 }
 </style>
