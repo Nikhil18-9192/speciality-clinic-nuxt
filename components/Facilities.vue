@@ -141,7 +141,7 @@ export default {
       .bottom {
         background: #fff;
         height: 194px;
-        padding: 23px 42px;
+        padding: 23px 20px 23px 42px;
         p {
           font-weight: 500;
           font-size: 18px;
@@ -153,6 +153,7 @@ export default {
           padding: 0;
           li {
             margin-bottom: 7px;
+            font-size: 14px;
           }
         }
       }
