@@ -1,7 +1,11 @@
 <template>
   <div id="phone-toolbar">
     <ul>
-      <li v-for="(item, i) in menus" :key="i">
+      <li
+        v-for="(item, i) in menus"
+        :key="i"
+        @click="$store.commit('toggleMenuState')"
+      >
         <nuxt-link :to="item.path">{{ item.name }}</nuxt-link>
       </li>
     </ul>

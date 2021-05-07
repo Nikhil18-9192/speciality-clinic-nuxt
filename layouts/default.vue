@@ -4,7 +4,11 @@
     <transition name="slide">
       <PhoneToolbar v-if="menuState" />
     </transition>
-
+    <div
+      v-if="menuState"
+      class="menuModal"
+      @click="$store.commit('toggleMenuState')"
+    ></div>
     <MobileNav v-if="$route.path !== '/gallery'" />
     <Nuxt />
     <Footer />
@@ -54,7 +58,15 @@ a {
   text-decoration: none;
   color: #000;
 }
-
+.menuModal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background: transparent;
+  top: 0;
+  left: 0;
+}
 *,
 *::before,
 *::after {
