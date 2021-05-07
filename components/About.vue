@@ -74,6 +74,9 @@ export default {
       display: flex;
       .icon {
         padding-right: 52px;
+        @include for-phone-only {
+          padding-right: 15px;
+        }
         @include for-tablet-only {
           padding-right: 20px;
         }
@@ -86,7 +89,7 @@ export default {
       .text {
         width: 243px;
         @include for-phone-only {
-          width: 225px;
+          width: 100%;
         }
         @include for-tablet-only {
           width: 225px;

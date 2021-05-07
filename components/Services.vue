@@ -284,7 +284,7 @@ export default {
         padding-right: 45px;
         @include for-phone-only {
           width: 100%;
-          margin-right: 0;
+          padding-right: 0;
         }
         @include for-tablet-only {
           width: 100%;
@@ -497,7 +497,7 @@ export default {
         margin-top: 50px;
         @include for-phone-only {
           width: 100%;
-          margin-right: 0;
+          padding-right: 0;
           margin-top: 24px;
         }
         @include for-tablet-only {
