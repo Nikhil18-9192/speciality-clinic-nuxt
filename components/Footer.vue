@@ -62,7 +62,7 @@ export default {
         text-decoration: none;
       }
       .number {
-        color: $primary;
+        color: #2b5568;
       }
     }
   }

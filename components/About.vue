@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div class="title">
-      <h4>Treatments we offer</h4>
+      <h2>Treatments we offer</h2>
     </div>
     <div class="treatments-wrapper">
       <div class="treatment" v-for="(item, i) in treatments" :key="i">
@@ -50,7 +50,7 @@ export default {
     @include for-tablet-only {
       margin-bottom: 50px;
     }
-    h4 {
+    h2 {
       font-weight: 500;
       font-size: 28px;
       line-height: 43px;

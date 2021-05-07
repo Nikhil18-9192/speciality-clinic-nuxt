@@ -1,14 +1,14 @@
 <template>
   <div id="services">
     <div class="title">
-      <h4>Our Services</h4>
+      <h2>Our Services</h2>
     </div>
     <div class="section-one">
       <div class="container">
         <div class="left">
-          <h4>Implants <span>-The new Era of Dentistry</span></h4>
+          <h2>Implants <span>-The new Era of Dentistry</span></h2>
           <ul>
-            <li v-for="(item, i) in lists" :key="i">
+            <li v-for="(item, i) in implants" :key="i">
               {{ item }}
             </li>
           </ul>
@@ -38,9 +38,9 @@
           </div>
         </div>
         <div class="right">
-          <h4>Esthetic Treatments</h4>
+          <h2>Esthetic Treatments</h2>
           <ul>
-            <li v-for="(item, i) in lists" :key="i">
+            <li v-for="(item, i) in ethestic" :key="i">
               {{ item }}
             </li>
           </ul>
@@ -50,9 +50,9 @@
     <div class="section-three">
       <div class="container">
         <div class="left">
-          <h4>Root Canal Treatment <span>(RCT)</span></h4>
+          <h2>Root Canal Treatment <span>(RCT)</span></h2>
           <ul>
-            <li v-for="(item, i) in lists" :key="i">
+            <li v-for="(item, i) in rootCanel" :key="i">
               {{ item }}
             </li>
           </ul>
@@ -79,20 +79,21 @@
           </div>
         </div>
         <div class="right">
-          <h4>Orthodontics <span>(Braces)</span></h4>
+          <h2>Orthodontics <span>(Braces)</span></h2>
           <div class="desc">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-              Lacus pretium diam molestie enim et augue potenti amet phasellus.
+              Many of the dental problems like cavities, gum problems, bad
+              breath, early wearing of teeth are due to wrong alignment of
+              teeth.
             </p>
             <p>
-              Eu libero non non accumsan ultrices eu. Aliquet lacus tristique
-              nulla sapien ante. Adipiscing faucibus ultricies risus, et, vel.
-              Adipiscing faucibus ultricies risus, et, vel.
+              Orthodontics (Braces/Clip) treatment can correct overcrowded
+              teeth, teeth with excessive spacing in b/w, protruded or retruded
+              teeth
             </p>
           </div>
           <ul>
-            <li v-for="(item, i) in lists" :key="i">
+            <li v-for="(item, i) in orthodontics" :key="i">
               {{ item }}
             </li>
           </ul>
@@ -102,9 +103,9 @@
     <div class="section-five">
       <div class="container">
         <div class="left">
-          <h4>Gum Treatments</h4>
+          <h2>Gum Treatments</h2>
           <ul>
-            <li v-for="(item, i) in lists" :key="i">
+            <li v-for="(item, i) in gumTreatments" :key="i">
               {{ item }}
             </li>
           </ul>
@@ -122,13 +123,34 @@
 </template>
 
 <script>
-import { servicesList } from '@/utils'
+import {
+  gumTreatments,
+  implants,
+  orthodontics,
+  ethestic,
+  rootCanel,
+} from '@/utils'
 export default {
   name: 'ServicesComponent',
 
   computed: {
     lists() {
       return servicesList
+    },
+    implants() {
+      return implants
+    },
+    ethestic() {
+      return ethestic
+    },
+    rootCanel() {
+      return rootCanel
+    },
+    orthodontics() {
+      return orthodontics
+    },
+    gumTreatments() {
+      return gumTreatments
     },
   },
 }
@@ -152,7 +174,7 @@ export default {
       padding-top: 20px;
       padding-bottom: 40px;
     }
-    h4 {
+    h2 {
       font-weight: 500;
       font-size: 28px;
       line-height: 43px;
@@ -190,7 +212,7 @@ export default {
         @include for-tablet-only {
           width: 100%;
         }
-        h4 {
+        h2 {
           font-weight: bold;
           font-size: 36px;
           margin-bottom: 40px;
@@ -259,7 +281,7 @@ export default {
         width: 65%;
         display: flex;
         justify-content: flex-end;
-        margin-right: 75px;
+        padding-right: 45px;
         @include for-phone-only {
           width: 100%;
           margin-right: 0;
@@ -267,6 +289,42 @@ export default {
         @include for-tablet-only {
           width: 100%;
           margin-right: 0;
+        }
+        .image-container {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          @include for-phone-only {
+            flex-direction: column;
+            row-gap: 15px;
+          }
+          @include for-tablet-only {
+            column-gap: 24px;
+          }
+
+          .image {
+            border: 1px solid #c1c1c1;
+            padding: 20px;
+            margin-right: 24px;
+            max-height: 322px;
+            @include for-phone-only {
+              margin-right: 0;
+            }
+            @include for-tablet-only {
+              margin-right: 0;
+            }
+            img {
+              width: 282px;
+              height: 276px;
+              object-fit: cover;
+              @include for-phone-only {
+                width: 100%;
+              }
+              @include for-tablet-only {
+                width: 260px;
+              }
+            }
+          }
         }
       }
       .right {
@@ -277,7 +335,7 @@ export default {
         @include for-tablet-only {
           width: 100%;
         }
-        h4 {
+        h2 {
           font-weight: bold;
           font-size: 36px;
           margin-bottom: 40px;
@@ -337,7 +395,7 @@ export default {
         @include for-tablet-only {
           width: 100%;
         }
-        h4 {
+        h2 {
           font-weight: bold;
           font-size: 36px;
           margin-bottom: 40px;
@@ -435,7 +493,7 @@ export default {
         width: 65%;
         display: flex;
         justify-content: flex-end;
-        margin-right: 75px;
+        padding-right: 45px;
         margin-top: 50px;
         @include for-phone-only {
           width: 100%;
@@ -446,6 +504,42 @@ export default {
           width: 100%;
           margin-right: 0;
         }
+        .image-container {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          @include for-phone-only {
+            flex-direction: column;
+            row-gap: 15px;
+          }
+          @include for-tablet-only {
+            column-gap: 24px;
+          }
+
+          .image {
+            border: 1px solid #c1c1c1;
+            padding: 20px;
+            margin-right: 24px;
+            max-height: 322px;
+            @include for-phone-only {
+              margin-right: 0;
+            }
+            @include for-tablet-only {
+              margin-right: 0;
+            }
+            img {
+              width: 282px;
+              height: 276px;
+              object-fit: cover;
+              @include for-phone-only {
+                width: 100%;
+              }
+              @include for-tablet-only {
+                width: 260px;
+              }
+            }
+          }
+        }
       }
       .right {
         width: 35%;
@@ -455,10 +549,11 @@ export default {
         @include for-tablet-only {
           width: 100%;
         }
-        h4 {
+        h2 {
           font-weight: bold;
           font-size: 36px;
           margin-bottom: 40px;
+          text-align: right;
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
@@ -525,7 +620,7 @@ export default {
         @include for-tablet-only {
           width: 100%;
         }
-        h4 {
+        h2 {
           font-weight: bold;
           font-size: 36px;
           margin-bottom: 40px;
@@ -577,6 +672,7 @@ export default {
 .image-container {
   display: flex;
   width: 100%;
+
   @include for-phone-only {
     flex-direction: column;
     row-gap: 15px;

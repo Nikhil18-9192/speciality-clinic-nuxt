@@ -15,7 +15,7 @@
     </div>
     <div class="overlay"></div>
     <div class="title">
-      <h4>Facilities At Our Clinic</h4>
+      <h2>Facilities At Our Clinic</h2>
     </div>
     <div class="card-container">
       <div class="card" v-for="(item, i) in facelities" :key="i">
@@ -24,6 +24,9 @@
         </div>
         <div class="bottom">
           <p>{{ item.name }}</p>
+          <ul>
+            <li v-for="(item, i) in item.subpoint" :key="i">- {{ item }}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -48,7 +51,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('/facility-bg.png');
+  background-image: url('/facility-bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -92,7 +95,7 @@ export default {
       padding-top: 110px;
       margin-bottom: 24px;
     }
-    h4 {
+    h2 {
       font-weight: 500;
       font-size: 24px;
       line-height: 37px;
@@ -144,6 +147,13 @@ export default {
           font-size: 18px;
           line-height: 28px;
           letter-spacing: 0.035em;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          li {
+            margin-bottom: 7px;
+          }
         }
       }
     }
