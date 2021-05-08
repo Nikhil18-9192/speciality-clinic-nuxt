@@ -74,7 +74,7 @@ export default {
     position: relative;
     width: 45px;
     height: 45px;
-    // border: 1px solid black;
+    border: 1px solid black;
 
     span {
       display: block;
@@ -90,7 +90,7 @@ export default {
       overflow: hidden;
       position: absolute;
       transform: translate(-50%, -50%);
-
+      padding-bottom: 2px;
       span {
         height: 2px;
         width: 32px;
@@ -111,6 +111,7 @@ export default {
       left: 50%;
       width: 32px;
       height: 32px;
+
       z-index: 2;
       overflow: hidden;
       position: absolute;
@@ -126,13 +127,13 @@ export default {
         height: 2px;
         width: 100%;
         top: calc(50% - 1px);
-        transition: 0.6s ease all;
+        transition: 0.7s ease all;
       }
       :nth-child(2) {
         width: 2px;
         height: 100%;
         left: calc(50% - 1px);
-        transition: 0.6s ease all;
+        transition: 0.7s ease all;
       }
     }
   }
