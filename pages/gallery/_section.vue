@@ -10,7 +10,9 @@
       <p>Home</p>
     </div>
     <div class="title">
-      <h1>Gallery</h1>
+      <h1>
+        Gallery<span>/{{ section.replace('-', ' ') }}</span>
+      </h1>
     </div>
     <div class="image-container">
       <div
@@ -27,18 +29,39 @@
 </template>
 
 <script>
-import { galleryImages } from '@/utils'
+import {
+  implantsImages,
+  estheticImages,
+  rootCanelImages,
+  orthodonticsImages,
+  gumTreatmentsImages,
+} from '@/utils'
 export default {
   name: 'GalleryPage',
   data() {
     return {
       selectedIndex: 0,
       modal: false,
+      section: '',
     }
+  },
+  mounted() {
+    console.log(this.$route.params.section)
+    this.section = this.$route.params.section
   },
   computed: {
     images() {
-      return galleryImages
+      if (this.section == 'implants') {
+        return implantsImages
+      } else if (this.section == 'esthetic') {
+        return estheticImages
+      } else if (this.section == 'root-canal') {
+        return rootCanelImages
+      } else if (this.section == 'orthodontics') {
+        return orthodonticsImages
+      } else if (this.section == 'gum-treatments') {
+        return gumTreatmentsImages
+      }
     },
   },
   methods: {
@@ -106,6 +129,12 @@ export default {
       font-size: 28px;
       line-height: 43px;
       letter-spacing: 0.035em;
+      span {
+        font-size: 14px;
+        color: #6d6d6d;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
     }
   }
   .image-container {

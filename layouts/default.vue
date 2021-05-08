@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Toolbar v-if="$route.path !== '/gallery'" />
+    <Toolbar v-if="$route.path == '/'" />
     <transition name="slide">
       <PhoneToolbar v-if="menuState" />
     </transition>
@@ -9,7 +9,7 @@
       class="menuModal"
       @click="$store.commit('toggleMenuState')"
     ></div>
-    <MobileNav v-if="$route.path !== '/gallery'" />
+    <MobileNav v-if="$route.path == '/'" />
     <Nuxt />
     <Footer />
   </div>

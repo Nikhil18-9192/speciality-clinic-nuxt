@@ -7,6 +7,7 @@ const menus = [
 ]
 
 const facelities = [
+    { name: 'OPD', icon: '/dentist-tools.svg' },
     { name: 'X-Ray Facility', icon: '/xray.svg' },
     {
         name: 'Steriliztion protocol.',
@@ -54,6 +55,16 @@ const treatments = [
 
 const galleryImages = [{ image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" },]
 
+const implantsImages = [{ image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" },]
+
+const estheticImages = [{ image: '/esthetic2.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" },]
+
+const rootCanelImages = [{ image: '/esthetic1.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" },]
+
+const orthodonticsImages = [{ image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" },]
+
+const gumTreatmentsImages = [{ image: '/esthetic1.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" },]
+
 const implants = [
     'Implants are artificial tooth root replacements to replace missing teeth.',
     'Implant supported teeth look, feel & function like natural teeth.',
@@ -95,4 +106,4 @@ const gumTreatments = [
 
 
 
-export { menus, facelities, treatments, galleryImages, implants, ethestic, rootCanel, orthodontics, gumTreatments }
+export { menus, facelities, treatments, galleryImages, implants, ethestic, rootCanel, orthodontics, gumTreatments, implantsImages, gumTreatmentsImages, orthodonticsImages, estheticImages, rootCanelImages }

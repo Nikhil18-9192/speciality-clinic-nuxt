@@ -12,6 +12,10 @@
               {{ item }}
             </li>
           </ul>
+
+          <nuxt-link class="gallery-btn" to="/gallery/implants"
+            >Gallery</nuxt-link
+          >
         </div>
         <div class="right">
           <div class="image-container">
@@ -44,6 +48,9 @@
               {{ item }}
             </li>
           </ul>
+          <nuxt-link class="gallery-btn" to="/gallery/esthetic"
+            >Gallery</nuxt-link
+          >
         </div>
       </div>
     </div>
@@ -56,6 +63,9 @@
               {{ item }}
             </li>
           </ul>
+          <nuxt-link class="gallery-btn" to="/gallery/root-canal"
+            >Gallery</nuxt-link
+          >
         </div>
         <div class="right">
           <div class="image-container">
@@ -97,6 +107,9 @@
               {{ item }}
             </li>
           </ul>
+          <nuxt-link class="gallery-btn" to="/gallery/orthodontics"
+            >Gallery</nuxt-link
+          >
         </div>
       </div>
     </div>
@@ -109,6 +122,9 @@
               {{ item }}
             </li>
           </ul>
+          <nuxt-link class="gallery-btn" to="/gallery/gum-treatments"
+            >Gallery</nuxt-link
+          >
         </div>
         <div class="right">
           <div class="image-container">
@@ -388,7 +404,7 @@ export default {
         flex-direction: column;
       }
       .left {
-        width: 40%;
+        width: 35%;
         @include for-phone-only {
           width: 100%;
         }
@@ -430,7 +446,7 @@ export default {
         }
       }
       .right {
-        width: 60%;
+        width: 65%;
         padding-left: 35px;
         display: flex;
         justify-content: center;
@@ -667,6 +683,22 @@ export default {
         }
       }
     }
+  }
+}
+.gallery-btn {
+  width: 137px;
+  height: 37px;
+  border-radius: 53px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-top: 12px;
+  font-weight: 500;
+  transition: 0.3s ease all;
+  &:hover {
+    background: $primary;
   }
 }
 .image-container {

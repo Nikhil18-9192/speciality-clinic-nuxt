@@ -5,7 +5,7 @@
         <img src="/logo.png" alt="logo" />
       </nuxt-link>
     </div>
-    <div class="burger_menu" @click="$store.commit('toggleMenuState')">
+    <div class="burger_menu" @click="menuToggle">
       <div class="burger_open">
         <span :class="menuState ? 't1' : ''"></span>
         <span :class="menuState ? 't1' : ''"></span>
@@ -38,7 +38,18 @@ export default {
       this.menuState = newState
     },
   },
-  methods: {},
+  methods: {
+    menuToggle() {
+      this.$store.commit('toggleMenuState')
+      setTimeout(
+        function () {
+          //BIND
+          this.customEffect = 'blueborder'
+        }.bind(this),
+        1000
+      )
+    },
+  },
 }
 </script>
 
