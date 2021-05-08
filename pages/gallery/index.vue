@@ -123,8 +123,10 @@ export default {
     .image {
       width: 100%;
       max-width: 349px;
-      height: 193px;
+      height: 100%;
       transition: 0.3s ease all;
+      margin-bottom: 24px;
+
       cursor: pointer;
       @include for-big-desktop-up {
         max-width: 449px;
@@ -132,7 +134,7 @@ export default {
       }
       img {
         width: 100%;
-        height: 100%;
+        height: 193px;
         object-fit: cover;
         &:hover {
           transform: scale(1.08);
