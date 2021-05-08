@@ -41,13 +41,6 @@ export default {
   methods: {
     menuToggle() {
       this.$store.commit('toggleMenuState')
-      setTimeout(
-        function () {
-          //BIND
-          this.customEffect = 'blueborder'
-        }.bind(this),
-        1000
-      )
     },
   },
 }
@@ -101,19 +94,23 @@ export default {
       position: absolute;
       transform: translate(-50%, -50%);
       padding-bottom: 2px;
+      transition-delay: 2s;
       span {
         height: 2px;
         width: 32px;
       }
       :first-child {
-        transition: 0.4s ease-in all;
+        transition: 0.3s ease-out all;
+        transition-delay: 1s;
       }
       :nth-child(2) {
         margin: 4px 0;
-        transition: 0.5s ease-in all;
+        transition: 0.4s ease-out all;
+        transition-delay: 1s;
       }
       :last-child {
-        transition: 0.6s ease-in all;
+        transition: 0.5s ease-out all;
+        transition-delay: 1s;
       }
     }
     .burger_close {
@@ -121,12 +118,11 @@ export default {
       left: 50%;
       width: 32px;
       height: 32px;
-
       z-index: 2;
       overflow: hidden;
       position: absolute;
       transform: translate(-50%, -50%) rotate(45deg);
-
+      transition-delay: 2s;
       span {
         height: 2px;
         width: 32px;
@@ -137,12 +133,14 @@ export default {
         width: 100%;
         top: calc(50% - 1px);
         transition: 0.4s ease-in all;
+        transition-delay: 0.8s;
       }
       :nth-child(2) {
         width: 2px;
         height: 100%;
         left: calc(50% - 1px);
         transition: 0.4s ease-in all;
+        transition-delay: 0.8s;
       }
     }
   }
