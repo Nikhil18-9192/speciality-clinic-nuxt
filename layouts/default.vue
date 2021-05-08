@@ -43,7 +43,7 @@ export default {
   },
 }
 </script>
-<style >
+<style lang="scss">
 html {
   font-family: 'Satoshi', sans-serif;
   font-size: 16px;
@@ -65,8 +65,8 @@ body {
   z-index: 2000;
 }
 .whatsapp-link a img {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
 }
 a {
