@@ -515,10 +515,12 @@ export default {
           width: 100%;
           padding-right: 0;
           margin-top: 24px;
+          margin-top: 0;
         }
         @include for-tablet-only {
           width: 100%;
           margin-right: 0;
+          margin-top: 0;
         }
         .image-container {
           display: flex;
@@ -698,6 +700,12 @@ export default {
   font-weight: 500;
   transition: 0.3s ease all;
   text-transform: uppercase;
+  @include for-phone-only {
+    margin-bottom: 15px;
+  }
+  @include for-tablet-only {
+    margin-bottom: 25px;
+  }
   &:hover {
     background: $primary;
   }

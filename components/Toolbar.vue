@@ -75,6 +75,9 @@ export default {
     }
     .nav-menu {
       padding-left: 92px;
+      @include for-tablet-only {
+        padding-left: 30px;
+      }
       ul {
         list-style: none;
         display: flex;
@@ -85,6 +88,9 @@ export default {
         li {
           margin-right: 56px;
           height: 100%;
+          @include for-tablet-only {
+            margin-right: 40px;
+          }
           a {
             position: relative;
             font-weight: 500;

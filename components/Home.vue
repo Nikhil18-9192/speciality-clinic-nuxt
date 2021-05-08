@@ -71,6 +71,10 @@ export default {
       width: 196px;
       height: 53px;
       border-radius: 53px;
+      transition: 0.3s ease all;
+      &:hover {
+        background: $primary;
+      }
       img {
         width: 17px;
         height: 17px;
