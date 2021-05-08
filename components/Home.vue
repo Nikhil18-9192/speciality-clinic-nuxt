@@ -55,6 +55,7 @@ export default {
       font-size: 48px;
       font-weight: 700;
       padding-bottom: 35px;
+      line-height: 114.5%;
       background: linear-gradient(180deg, #000000 0%, #0087d2 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
