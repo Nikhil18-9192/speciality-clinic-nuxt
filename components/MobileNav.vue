@@ -5,7 +5,11 @@
         <img src="/logo.png" alt="logo" />
       </nuxt-link>
     </div>
-    <div class="burger_menu" @click="menuToggle">
+    <div
+      class="burger_menu"
+      :class="[menuState ? 'menu-active' : 'menu-inactive']"
+      @click="menuToggle"
+    >
       <div class="burger_open">
         <span :class="menuState ? 't1' : ''"></span>
         <span :class="menuState ? 't1' : ''"></span>
@@ -109,7 +113,7 @@ export default {
         transition: 0.4s ease-in all;
       }
       :nth-child(2) {
-        margin: 4px 0;
+        margin: 8px 0;
         transition: 0.5s ease-in all;
       }
       :last-child {
@@ -152,5 +156,21 @@ export default {
 }
 .t2 {
   transform: translate(0%, -105%);
+}
+
+.menu-active {
+  .burger_close {
+    span {
+      transition-delay: 0.5s !important;
+    }
+  }
+}
+
+.menu-inactive {
+  .burger_open {
+    span {
+      transition-delay: 0.5s !important;
+    }
+  }
 }
 </style>

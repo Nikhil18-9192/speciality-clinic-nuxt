@@ -66,7 +66,6 @@ export default {
     left: 0;
     width: 100%;
     overflow: hidden;
-    line-height: 0;
   }
 
   .custom-shape-divider-top-1620213850 svg {
@@ -98,7 +97,6 @@ export default {
     h2 {
       font-weight: 500;
       font-size: 24px;
-      line-height: 37px;
       letter-spacing: 0.035em;
     }
   }
@@ -145,7 +143,6 @@ export default {
         p {
           font-weight: 500;
           font-size: 18px;
-          line-height: 28px;
           letter-spacing: 0.035em;
         }
         ul {

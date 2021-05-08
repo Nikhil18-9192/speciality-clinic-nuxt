@@ -84,7 +84,6 @@ export default {
       margin-left: 7px;
       font-weight: normal;
       font-size: 14px;
-      line-height: 146.69%;
       text-align: center;
       letter-spacing: 0.12em;
     }
@@ -104,7 +103,6 @@ export default {
     h1 {
       font-weight: 500;
       font-size: 28px;
-      line-height: 43px;
       letter-spacing: 0.035em;
     }
   }

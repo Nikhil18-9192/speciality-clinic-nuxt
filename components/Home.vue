@@ -53,7 +53,6 @@ export default {
     }
     h1 {
       font-size: 48px;
-      line-height: 114.5%;
       font-weight: 700;
       padding-bottom: 35px;
       background: linear-gradient(180deg, #000000 0%, #0087d2 100%);
@@ -80,7 +79,6 @@ export default {
       P {
         font-weight: 500;
         font-size: 16px;
-        line-height: 24px;
         letter-spacing: 0.035em;
       }
     }

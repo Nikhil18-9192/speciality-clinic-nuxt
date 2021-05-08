@@ -89,7 +89,6 @@ export default {
             position: relative;
             font-weight: 500;
             font-size: 16px;
-            line-height: 24px;
             transition: 0.3s ease all;
             &:hover {
               background: linear-gradient(to bottom, #000000 0%, #0079be 100%);
