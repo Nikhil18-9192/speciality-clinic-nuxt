@@ -134,14 +134,12 @@ export default {
         width: 100%;
         top: calc(50% - 1px);
         transition: 0.4s ease-in all;
-        transition-delay: 0.4s;
       }
       :nth-child(2) {
         width: 2px;
         height: 100%;
         left: calc(50% - 1px);
         transition: 0.4s ease-in all;
-        transition-delay: 0.4s;
       }
     }
   }
