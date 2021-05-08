@@ -19,7 +19,8 @@
         :key="i"
         @click="viewImage(i)"
       >
-        <img :src="item" alt="" />
+        <img :src="item.image" alt="" />
+        <h4 class="image-title">{{ item.title }}</h4>
       </div>
     </div>
   </div>
@@ -133,11 +134,16 @@ export default {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        &:hover {
+          transform: scale(1.08);
+          filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.26));
+          transition: 0.3s ease all;
+        }
       }
-      &:hover {
-        transform: scale(1.08);
-        filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.26));
-        transition: 0.3s ease all;
+      .image-title {
+        padding-top: 8px;
+        text-align: center;
+        text-transform: capitalize;
       }
     }
   }

@@ -52,7 +52,7 @@ const treatments = [
 
 
 
-const galleryImages = ['/beautiful-young-woman.jpg', '/woman-looking-mirror.jpg', '/esthetic1.jpg', '/esthetic2.jpg', '/beautiful-young-woman.jpg', '/woman-looking-mirror.jpg']
+const galleryImages = [{ image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" },]
 
 const implants = [
     'Implants are artificial tooth root replacements to replace missing teeth.',

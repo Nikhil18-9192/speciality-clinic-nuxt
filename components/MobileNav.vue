@@ -75,7 +75,6 @@ export default {
     width: 45px;
     height: 45px;
     border: 1px solid black;
-
     span {
       display: block;
       background: #000;
@@ -96,14 +95,14 @@ export default {
         width: 32px;
       }
       :first-child {
-        transition: 0.4s ease all;
+        transition: 0.4s ease-in all;
       }
       :nth-child(2) {
         margin: 4px 0;
-        transition: 0.5s ease all;
+        transition: 0.5s ease-in all;
       }
       :last-child {
-        transition: 0.6s ease all;
+        transition: 0.6s ease-in all;
       }
     }
     .burger_close {
@@ -120,20 +119,19 @@ export default {
       span {
         height: 2px;
         width: 32px;
-
         position: absolute;
       }
       :first-child {
         height: 2px;
         width: 100%;
         top: calc(50% - 1px);
-        transition: 0.7s ease all;
+        transition: 0.4s ease-in all;
       }
       :nth-child(2) {
         width: 2px;
         height: 100%;
         left: calc(50% - 1px);
-        transition: 0.7s ease all;
+        transition: 0.4s ease-in all;
       }
     }
   }

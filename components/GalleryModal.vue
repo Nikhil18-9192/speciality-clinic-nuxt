@@ -7,7 +7,7 @@
         v-show="i == currentSlide"
         :key="i"
       >
-        <img :src="item" alt="" />
+        <img :src="item.image" alt="" />
       </div>
       <div class="control-btn">
         <button class="btn" @click="prev">prev</button>
