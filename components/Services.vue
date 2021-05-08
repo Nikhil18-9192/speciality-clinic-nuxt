@@ -193,7 +193,6 @@ export default {
     h2 {
       font-weight: 500;
       font-size: 28px;
-      line-height: 43px;
       letter-spacing: 0.035em;
     }
   }
@@ -254,7 +253,6 @@ export default {
           li {
             font-weight: 400;
             font-size: 16px;
-            line-height: 122%;
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
@@ -377,7 +375,6 @@ export default {
           li {
             font-weight: 400;
             font-size: 16px;
-            line-height: 122%;
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
@@ -437,7 +434,6 @@ export default {
           li {
             font-weight: 400;
             font-size: 16px;
-            line-height: 122%;
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
@@ -587,7 +583,6 @@ export default {
           p {
             font-weight: 400;
             font-size: 16px;
-            line-height: 122%;
             letter-spacing: 0.08em;
             margin-bottom: 15px;
           }
@@ -604,7 +599,6 @@ export default {
           li {
             font-weight: 400;
             font-size: 16px;
-            line-height: 122%;
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
@@ -659,7 +653,6 @@ export default {
           li {
             font-weight: 400;
             font-size: 16px;
-            line-height: 122%;
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;

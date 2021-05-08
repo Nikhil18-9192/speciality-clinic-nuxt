@@ -39,7 +39,6 @@ export default {
   .address {
     font-weight: 500;
     font-size: 16px;
-    line-height: 40px;
     letter-spacing: 0.035em;
   }
   .contact {
@@ -51,7 +50,6 @@ export default {
     div {
       font-weight: 500;
       font-size: 16px;
-      line-height: 40px;
       letter-spacing: 0.035em;
       margin-left: 55px;
       @include for-phone-only {
@@ -77,7 +75,6 @@ export default {
     p {
       font-weight: 500;
       font-size: 10px;
-      line-height: 15px;
       letter-spacing: 0.035em;
     }
   }

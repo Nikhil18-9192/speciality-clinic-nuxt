@@ -53,7 +53,6 @@ export default {
     h2 {
       font-weight: 500;
       font-size: 28px;
-      line-height: 43px;
       letter-spacing: 0.035em;
     }
   }
