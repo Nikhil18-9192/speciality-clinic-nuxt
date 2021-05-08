@@ -98,21 +98,22 @@ export default {
       position: absolute;
       transform: translate(-50%, -50%);
       padding-bottom: 2px;
-      transition-delay: 2s;
+
       span {
         height: 2px;
         width: 32px;
       }
       :first-child {
-        transition: 0.3s ease-out all;
+        transition: 0.3s ease all;
         transition-delay: 1s;
       }
       :nth-child(2) {
-        margin: 8px 0;
-        transition: 0.5s ease-in all;
+        margin: 4px 0;
+        transition: 0.5s ease all;
+        transition-delay: 1s;
       }
       :last-child {
-        transition: 0.5s ease-out all;
+        transition: 0.5s ease all;
         transition-delay: 1s;
       }
     }
@@ -125,7 +126,7 @@ export default {
       overflow: hidden;
       position: absolute;
       transform: translate(-50%, -50%) rotate(45deg);
-      transition-delay: 2s;
+
       span {
         height: 2px;
         width: 32px;
@@ -135,14 +136,14 @@ export default {
         height: 2px;
         width: 100%;
         top: calc(50% - 1px);
-        transition: 0.4s ease-in all;
+        transition: 0.4s ease all;
         transition-delay: 0.8s;
       }
       :nth-child(2) {
         width: 2px;
         height: 100%;
         left: calc(50% - 1px);
-        transition: 0.4s ease-in all;
+        transition: 0.4s ease all;
         transition-delay: 0.8s;
       }
     }
@@ -153,21 +154,5 @@ export default {
 }
 .t2 {
   transform: translate(0%, -105%);
-}
-
-.menu-active {
-  .burger_close {
-    span {
-      transition-delay: 0.5s !important;
-    }
-  }
-}
-
-.menu-inactive {
-  .burger_open {
-    span {
-      transition-delay: 0.5s !important;
-    }
-  }
 }
 </style>
