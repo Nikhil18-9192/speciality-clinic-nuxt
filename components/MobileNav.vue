@@ -107,7 +107,7 @@ export default {
         transition: 0.4s ease-in all;
       }
       :nth-child(2) {
-        margin: 4px 0;
+        margin: 8px 0;
         transition: 0.5s ease-in all;
       }
       :last-child {
