@@ -1,6 +1,11 @@
 <template>
   <div>
     <Toolbar v-if="$route.path == '/'" />
+    <div class="whatsapp-link">
+      <a href="https://api.whatsapp.com/send?text=Hello!&phone=+919673310995">
+        <img src="/whatsapp.svg" alt="whatsapp icon" />
+      </a>
+    </div>
     <transition name="slide">
       <PhoneToolbar v-if="menuState" />
     </transition>
@@ -53,7 +58,17 @@ html {
 body {
   color: #000000;
 }
-
+.whatsapp-link {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2000;
+}
+.whatsapp-link a img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 a {
   text-decoration: none;
   color: #000;

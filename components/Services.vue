@@ -14,7 +14,7 @@
           </ul>
 
           <nuxt-link class="gallery-btn" to="/gallery/implants"
-            >Gallery</nuxt-link
+            >Images</nuxt-link
           >
         </div>
         <div class="right">
@@ -48,8 +48,8 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/esthetic"
-            >Gallery</nuxt-link
+          <nuxt-link class="gallery-btn" to="/gallery/esthetic-treatments"
+            >Images</nuxt-link
           >
         </div>
       </div>
@@ -64,7 +64,7 @@
             </li>
           </ul>
           <nuxt-link class="gallery-btn" to="/gallery/root-canal"
-            >Gallery</nuxt-link
+            >Images</nuxt-link
           >
         </div>
         <div class="right">
@@ -108,7 +108,7 @@
             </li>
           </ul>
           <nuxt-link class="gallery-btn" to="/gallery/orthodontics"
-            >Gallery</nuxt-link
+            >Images</nuxt-link
           >
         </div>
       </div>
@@ -123,7 +123,7 @@
             </li>
           </ul>
           <nuxt-link class="gallery-btn" to="/gallery/gum-treatments"
-            >Gallery</nuxt-link
+            >Images</nuxt-link
           >
         </div>
         <div class="right">
@@ -697,6 +697,7 @@ export default {
   margin-top: 12px;
   font-weight: 500;
   transition: 0.3s ease all;
+  text-transform: uppercase;
   &:hover {
     background: $primary;
   }

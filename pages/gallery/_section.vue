@@ -53,7 +53,7 @@ export default {
     images() {
       if (this.section == 'implants') {
         return implantsImages
-      } else if (this.section == 'esthetic') {
+      } else if (this.section == 'esthetic-treatments') {
         return estheticImages
       } else if (this.section == 'root-canal') {
         return rootCanelImages
