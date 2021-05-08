@@ -1,7 +1,7 @@
 <template>
   <div id="footer">
     <p class="address">
-      609 / 2 / A, E - Ward, “Rishab Pride”,1st Floor, Opp. Metro Hospital,
+      609 / 2 / A, E - Ward, Rishab Pride, 1st Floor, Opp. Metro Hospital,
       Shahupuri 2nd Lane, Kolhapur -410 001
     </p>
     <div class="contact">
@@ -44,6 +44,7 @@ export default {
   .contact {
     display: flex;
     justify-content: center;
+    margin-top: 18px;
     @include for-phone-only {
       flex-direction: column;
     }
