@@ -84,6 +84,7 @@ export default {
       P {
         font-weight: 500;
         font-size: 16px;
+        line-height: 24px;
         letter-spacing: 0.035em;
       }
     }

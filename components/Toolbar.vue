@@ -86,7 +86,7 @@ export default {
         padding: 0;
         transition: 0.6s ease all;
         li {
-          margin-right: 56px;
+          margin-right: 45px;
           height: 100%;
           @include for-tablet-only {
             margin-right: 40px;

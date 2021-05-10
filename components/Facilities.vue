@@ -18,7 +18,15 @@
       <h2>Facilities At Our Clinic</h2>
     </div>
     <div class="card-container">
-      <div class="card" v-for="(item, i) in facelities" :key="i">
+      <div
+        class="card"
+        v-for="(item, i) in facelities"
+        :key="i"
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-offset="200"
+        :data-aos-delay="i * 200"
+      >
         <div class="top">
           <img :src="item.icon" :alt="item.name" />
         </div>
@@ -87,7 +95,7 @@ export default {
     z-index: -1;
   }
   .title {
-    padding-top: 130px;
+    padding-top: 154px;
     text-align: center;
     margin-bottom: 66px;
     @include for-phone-only {
@@ -104,8 +112,8 @@ export default {
     padding: 0 157px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1245px;
+    gap: 24px;
+    max-width: 1130px;
     margin: 0 auto;
     @include for-phone-only {
       padding: 0 15px;
@@ -119,14 +127,14 @@ export default {
     }
     .card {
       width: 100%;
-      max-width: 289px;
+      max-width: 254px;
       height: 100%;
       @include for-phone-only {
         max-width: 100%;
       }
       .top {
         background: #fbfbfb;
-        height: 194px;
+        height: 171px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -138,7 +146,7 @@ export default {
       }
       .bottom {
         background: #fff;
-        height: 194px;
+        height: 171px;
         padding: 23px 20px 23px 42px;
         p {
           font-weight: 500;

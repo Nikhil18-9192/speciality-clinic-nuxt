@@ -3,7 +3,12 @@
     <div class="title">
       <h2>Our Services</h2>
     </div>
-    <div class="section-one">
+    <div
+      class="section-one"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-offset="200"
+    >
       <div class="container">
         <div class="left">
           <h2>Implants <span>-The new Era of Dentistry</span></h2>
@@ -29,7 +34,12 @@
         </div>
       </div>
     </div>
-    <div class="section-two">
+    <div
+      class="section-two"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-offset="200"
+    >
       <div class="container">
         <div class="left">
           <div class="image-container">
@@ -54,7 +64,12 @@
         </div>
       </div>
     </div>
-    <div class="section-three">
+    <div
+      class="section-three"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-offset="200"
+    >
       <div class="container">
         <div class="left">
           <h2>Root Canal Treatment <span>(RCT)</span></h2>
@@ -76,7 +91,12 @@
         </div>
       </div>
     </div>
-    <div class="section-four">
+    <div
+      class="section-four"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-offset="200"
+    >
       <div class="container">
         <div class="left">
           <div class="image-container">
@@ -113,7 +133,12 @@
         </div>
       </div>
     </div>
-    <div class="section-five">
+    <div
+      class="section-five"
+      data-aos="fade-up"
+      data-aos-duration="900"
+      data-aos-offset="200"
+    >
       <div class="container">
         <div class="left">
           <h2>Gum Treatments</h2>
@@ -193,6 +218,7 @@ export default {
     h2 {
       font-weight: 500;
       font-size: 28px;
+      line-height: 43px;
       letter-spacing: 0.035em;
     }
   }
@@ -230,7 +256,7 @@ export default {
         h2 {
           font-weight: bold;
           font-size: 36px;
-          margin-bottom: 40px;
+          margin-bottom: 43px;
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
@@ -261,14 +287,17 @@ export default {
       }
       .right {
         width: 65%;
-        margin-left: 75px;
+        padding-left: 76px;
+        padding-top: 37px;
         @include for-phone-only {
           width: 100%;
-          margin-left: 0;
+          padding-left: 0;
+          padding-top: 0;
         }
         @include for-tablet-only {
           width: 100%;
-          margin-left: 0;
+          padding-left: 0;
+          padding-top: 0;
         }
       }
     }
@@ -296,13 +325,16 @@ export default {
         display: flex;
         justify-content: flex-end;
         padding-right: 45px;
+        padding-top: 37px;
         @include for-phone-only {
           width: 100%;
           padding-right: 0;
+          padding-top: 0;
         }
         @include for-tablet-only {
           width: 100%;
           margin-right: 0;
+          padding-top: 0;
         }
         .image-container {
           display: flex;
@@ -320,16 +352,18 @@ export default {
             border: 1px solid #c1c1c1;
             padding: 20px;
             margin-right: 24px;
-            max-height: 322px;
+            height: 322px;
+            width: 322px;
             @include for-phone-only {
               margin-right: 0;
+              width: 100%;
             }
             @include for-tablet-only {
               margin-right: 0;
             }
             img {
-              width: 282px;
-              height: 276px;
+              width: 100%;
+              height: 100%;
               object-fit: cover;
               @include for-phone-only {
                 width: 100%;
@@ -352,7 +386,7 @@ export default {
         h2 {
           font-weight: bold;
           font-size: 36px;
-          margin-bottom: 40px;
+          margin-bottom: 43px;
           text-align: right;
           @include for-phone-only {
             font-size: 28px;
@@ -411,7 +445,7 @@ export default {
         h2 {
           font-weight: bold;
           font-size: 36px;
-          margin-bottom: 40px;
+          margin-bottom: 43px;
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
@@ -461,15 +495,18 @@ export default {
             border: 1px solid #c1c1c1;
             padding: 20px;
             margin-right: 24px;
+            width: 717px;
+            height: 322px;
             @include for-phone-only {
               margin-right: 0;
+              width: 100%;
             }
             @include for-tablet-only {
               margin-right: 0;
             }
             img {
-              width: 676px;
-              height: 234px;
+              width: 100%;
+              height: 100%;
               object-fit: cover;
               @include for-phone-only {
                 width: 100%;
@@ -534,16 +571,18 @@ export default {
             border: 1px solid #c1c1c1;
             padding: 20px;
             margin-right: 24px;
-            max-height: 322px;
+            height: 322px;
+            width: 322px;
             @include for-phone-only {
               margin-right: 0;
+              width: 100%;
             }
             @include for-tablet-only {
               margin-right: 0;
             }
             img {
-              width: 282px;
-              height: 276px;
+              width: 100%;
+              height: 100%;
               object-fit: cover;
               @include for-phone-only {
                 width: 100%;
@@ -566,7 +605,7 @@ export default {
         h2 {
           font-weight: bold;
           font-size: 36px;
-          margin-bottom: 40px;
+          margin-bottom: 43px;
           text-align: right;
           @include for-phone-only {
             font-size: 28px;
@@ -635,7 +674,7 @@ export default {
         h2 {
           font-weight: bold;
           font-size: 36px;
-          margin-bottom: 40px;
+          margin-bottom: 43px;
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
@@ -714,21 +753,22 @@ export default {
   @include for-tablet-only {
     column-gap: 24px;
   }
-
   .image {
     border: 1px solid #c1c1c1;
     padding: 20px;
     margin-right: 24px;
-    max-height: 322px;
+    width: 322px;
+    height: 322px;
     @include for-phone-only {
       margin-right: 0;
+      width: 100%;
     }
     @include for-tablet-only {
       margin-right: 0;
     }
     img {
-      width: 282px;
-      height: 276px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       @include for-phone-only {
         width: 100%;

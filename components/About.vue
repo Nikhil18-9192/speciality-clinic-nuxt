@@ -1,9 +1,15 @@
 <template>
-  <div id="about">
+  <div
+    id="about"
+    data-aos="fade-up"
+    data-aos-duration="900"
+    data-aos-offset="200"
+  >
     <div class="title">
       <h2>Treatments we offer</h2>
     </div>
     <div class="treatments-wrapper">
+      <hr />
       <div class="treatment" v-for="(item, i) in treatments" :key="i">
         <div class="icon">
           <img :src="item.icon" alt="" />
@@ -68,6 +74,19 @@ export default {
     }
     @include for-tablet-only {
       gap: 30px;
+    }
+    hr {
+      height: 489px;
+      width: 1px;
+      background: #ababab;
+      position: absolute;
+      left: 50%;
+      @include for-phone-only {
+        display: none;
+      }
+      @include for-tablet-only {
+        left: 51%;
+      }
     }
     .treatment {
       display: flex;

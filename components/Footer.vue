@@ -40,11 +40,12 @@ export default {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.035em;
+    line-height: 24px;
   }
   .contact {
     display: flex;
     justify-content: center;
-    margin-top: 18px;
+    margin-top: 19px;
     @include for-phone-only {
       flex-direction: column;
     }
