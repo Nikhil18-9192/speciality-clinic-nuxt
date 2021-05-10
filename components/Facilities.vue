@@ -134,31 +134,31 @@ export default {
       }
       .top {
         background: #fbfbfb;
-        height: 171px;
+        height: 158px;
         display: flex;
         justify-content: center;
         align-items: center;
         img {
-          width: 75px;
-          height: 75px;
+          width: 50px;
+          height: 50px;
           object-fit: contain;
         }
       }
       .bottom {
         background: #fff;
         height: 171px;
-        padding: 23px 20px 23px 42px;
+        padding: 25px 27px;
         p {
           font-weight: 500;
           font-size: 18px;
+          line-height: 28px;
           letter-spacing: 0.035em;
         }
         ul {
           list-style: none;
           padding: 0;
           li {
-            margin-bottom: 7px;
-            font-size: 14px;
+            font-size: 12px;
           }
         }
       }
