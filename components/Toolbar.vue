@@ -1,13 +1,16 @@
 <template>
-  <div id="toolbar">
+  <div
+    id="toolbar"
+    :class="showNavbar && scrollPosition !== 0 ? 'scroll-up' : ''"
+  >
     <div class="container">
-      <div class="logo">
+      <div :class="scrollPosition > 0 ? 'scroll-down' : 'logo'">
         <nuxt-link to="/">
           <img src="/logo.png" alt="logo image" />
         </nuxt-link>
       </div>
       <div class="nav-menu">
-        <ul :class="{ 'hidden-navbar': !showNavbar }">
+        <ul :class="!showNavbar ? 'hidden-navbar' : ''">
           <li v-for="(item, i) in menus" :key="i">
             <nuxt-link :to="item.path">{{ item.name }}</nuxt-link>
           </li>
@@ -50,28 +53,33 @@ export default {
 <style lang="scss" scoped>
 #toolbar {
   position: fixed;
-  top: 40px;
-  left: 157px;
+  top: 33px;
+  left: 0;
   z-index: 999;
+  width: 100%;
+  transition: 0.3s ease all;
   @include for-phone-only {
     display: none;
   }
-  @include for-tablet-only {
-    left: 70px;
-  }
+
   .container {
     display: flex;
-    justify-content: flex-end;
+    padding-left: 157px;
     align-items: flex-end;
+    @include for-tablet-only {
+      padding-left: 70px;
+    }
+    a {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
     .logo {
       width: 148px;
-      a {
-        img {
-          width: 100%;
-          height: 54px;
-          object-fit: contain;
-        }
-      }
+      height: 54px;
+      transition: 0.3s ease all;
     }
     .nav-menu {
       padding-left: 92px;
@@ -123,5 +131,19 @@ export default {
   .hidden-navbar {
     opacity: 0;
   }
+}
+.scroll-down {
+  width: 120px;
+  height: 44px;
+  transition: 0.3s ease all;
+}
+.scroll-up {
+  align-items: center;
+  height: 103px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(22px);
+  top: 0 !important;
+  padding-top: 33px;
+  transition: 0.3s ease all;
 }
 </style>
