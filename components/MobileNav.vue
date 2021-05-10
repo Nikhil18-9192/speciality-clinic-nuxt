@@ -1,10 +1,5 @@
 <template>
   <div id="mobile-nav">
-    <div class="logo">
-      <nuxt-link to="/">
-        <img src="/logo.png" alt="logo" />
-      </nuxt-link>
-    </div>
     <div
       class="burger_menu"
       :class="[menuState ? 'menu-active' : 'menu-inactive']"
@@ -19,6 +14,11 @@
         <span :class="!menuState ? 't1' : ''"></span>
         <span :class="!menuState ? 't2' : ''"></span>
       </div>
+    </div>
+    <div class="logo">
+      <nuxt-link to="/">
+        <img src="/logo.png" alt="logo" />
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -54,12 +54,14 @@ export default {
 #mobile-nav {
   position: fixed;
   width: 100%;
-  top: 12px;
+  height: 57px;
+  top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 2000;
-  padding: 0 15px;
+  padding: 0 23px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
   @include for-tablet-landscape-up {
     display: none;
   }
@@ -68,11 +70,12 @@ export default {
   }
 
   .logo {
-    width: 148px;
+    width: 100px;
+    margin-left: 15px;
     a {
       img {
         width: 100%;
-        height: 54px;
+        height: 36px;
         object-fit: contain;
       }
     }
@@ -80,13 +83,12 @@ export default {
 
   .burger_menu {
     position: relative;
-    width: 45px;
-    height: 45px;
-    border: 1px solid black;
+    width: 24px;
+    height: 100%;
     span {
       display: block;
       background: #000;
-      border-radius: 1px;
+      border-radius: 2px;
       will-change: transform;
     }
     .burger_open {
@@ -101,13 +103,13 @@ export default {
 
       span {
         height: 2px;
-        width: 32px;
+        width: 24px;
       }
       :first-child {
         transition: 0.4s ease-in all;
       }
       :nth-child(2) {
-        margin: 8px 0;
+        margin: 6px 0;
         transition: 0.5s ease-in all;
       }
       :last-child {
@@ -126,7 +128,7 @@ export default {
 
       span {
         height: 2px;
-        width: 32px;
+        width: 24px;
         position: absolute;
       }
       :first-child {

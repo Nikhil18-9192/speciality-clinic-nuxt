@@ -42,7 +42,7 @@ export default {
   height: 100%;
   padding: 50px 157px 134px 157px;
   @include for-phone-only {
-    padding: 24px 15px;
+    padding: 50px 23px 90px 23px;
   }
   @include for-tablet-only {
     padding: 50px 70px 50px 70px;
@@ -60,6 +60,9 @@ export default {
       font-weight: 500;
       font-size: 28px;
       letter-spacing: 0.035em;
+      @include for-phone-only {
+        font-size: 18px;
+      }
     }
   }
   .treatments-wrapper {
@@ -90,10 +93,11 @@ export default {
     }
     .treatment {
       display: flex;
+      justify-content: center;
       .icon {
         padding-right: 52px;
         @include for-phone-only {
-          padding-right: 15px;
+          padding-right: 29px;
         }
         @include for-tablet-only {
           padding-right: 20px;
@@ -102,15 +106,27 @@ export default {
           width: 66px;
           height: 66px;
           object-fit: contain;
+          @include for-phone-only {
+            width: 40px;
+            height: 40px;
+          }
         }
       }
       .text {
         width: 243px;
         @include for-phone-only {
-          width: 100%;
+          width: 240px;
         }
         @include for-tablet-only {
           width: 225px;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        @include for-phone-only {
+          font-size: 14px;
+          line-height: 21px;
         }
       }
     }

@@ -23,6 +23,9 @@
           >
         </div>
         <div class="right">
+          <h2 class="phone-title">
+            Implants <span>-The new Era of Dentistry</span>
+          </h2>
           <div class="image-container">
             <div class="image">
               <img src="/artboard.jpg" alt="" />
@@ -42,6 +45,7 @@
     >
       <div class="container">
         <div class="left">
+          <h2 class="phone-title">Esthetic Treatments</h2>
           <div class="image-container">
             <div class="image">
               <img src="/esthetic1.jpg" alt="" />
@@ -83,6 +87,7 @@
           >
         </div>
         <div class="right">
+          <h2 class="phone-title">Root Canal Treatment <span>(RCT)</span></h2>
           <div class="image-container">
             <div class="image">
               <img src="/root-canal.jpg" alt="" />
@@ -99,6 +104,7 @@
     >
       <div class="container">
         <div class="left">
+          <h2 class="phone-title">Orthodontics <span>(Braces)</span></h2>
           <div class="image-container">
             <div class="image">
               <img src="/teeth.jpg" alt="" />
@@ -152,6 +158,7 @@
           >
         </div>
         <div class="right">
+          <h2 class="phone-title">Gum Treatments</h2>
           <div class="image-container">
             <div class="image">
               <img src="/woman-looking-mirror.jpg" alt="" />
@@ -202,14 +209,13 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-
   .title {
     text-align: center;
     padding-top: 68px;
     padding-bottom: 80px;
     @include for-phone-only {
       padding-top: 24px;
-      padding-bottom: 40px;
+      padding-bottom: 23px;
     }
     @include for-tablet-only {
       padding-top: 20px;
@@ -220,6 +226,9 @@ export default {
       font-size: 28px;
       line-height: 43px;
       letter-spacing: 0.035em;
+      @include for-phone-only {
+        font-size: 18px;
+      }
     }
   }
   .section-one {
@@ -227,8 +236,8 @@ export default {
     padding-left: 157px;
     padding-right: 157px;
     @include for-phone-only {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding-left: 23px;
+      padding-right: 23px;
       padding-bottom: 40px;
     }
     @include for-tablet-only {
@@ -240,7 +249,7 @@ export default {
       display: flex;
       width: 100%;
       @include for-phone-only {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
       @include for-tablet-only {
         flex-direction: column;
@@ -260,6 +269,7 @@ export default {
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
+            display: none;
           }
           span {
             font-size: 14px;
@@ -282,6 +292,10 @@ export default {
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
+            @include for-phone-only {
+              font-size: 14px;
+              line-height: 122%;
+            }
           }
         }
       }
@@ -299,6 +313,22 @@ export default {
           padding-left: 0;
           padding-top: 0;
         }
+        .phone-title {
+          font-weight: bold;
+          font-size: 36px;
+          margin-bottom: 43px;
+          display: none;
+          @include for-phone-only {
+            font-size: 28px;
+            margin-bottom: 24px;
+            display: block;
+          }
+          span {
+            font-size: 14px;
+            color: #6d6d6d;
+            font-weight: 400;
+          }
+        }
       }
     }
   }
@@ -306,7 +336,7 @@ export default {
     padding: 81px 157px;
     background: #f2fbff;
     @include for-phone-only {
-      padding: 20px 15px;
+      padding: 20px 23px;
     }
     @include for-tablet-only {
       padding: 40px 70px;
@@ -315,7 +345,7 @@ export default {
       display: flex;
       width: 100%;
       @include for-phone-only {
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
       @include for-tablet-only {
         flex-direction: column-reverse;
@@ -327,6 +357,7 @@ export default {
         padding-right: 45px;
         padding-top: 37px;
         @include for-phone-only {
+          display: block;
           width: 100%;
           padding-right: 0;
           padding-top: 0;
@@ -336,13 +367,24 @@ export default {
           margin-right: 0;
           padding-top: 0;
         }
+        .phone-title {
+          font-weight: bold;
+          font-size: 36px;
+          margin-bottom: 43px;
+          display: none;
+          @include for-phone-only {
+            font-size: 28px;
+            margin-bottom: 24px;
+            display: block;
+          }
+        }
         .image-container {
           display: flex;
           width: 100%;
           justify-content: flex-end;
           @include for-phone-only {
-            flex-direction: column;
-            row-gap: 15px;
+            column-gap: 11px;
+            justify-content: center;
           }
           @include for-tablet-only {
             column-gap: 24px;
@@ -356,7 +398,9 @@ export default {
             width: 322px;
             @include for-phone-only {
               margin-right: 0;
-              width: 100%;
+              width: 159px;
+              height: 158px;
+              padding: 10px;
             }
             @include for-tablet-only {
               margin-right: 0;
@@ -392,6 +436,7 @@ export default {
             font-size: 28px;
             text-align: left;
             margin-bottom: 24px;
+            display: none;
           }
           @include for-tablet-only {
             text-align: left;
@@ -412,6 +457,10 @@ export default {
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
+            @include for-phone-only {
+              font-size: 14px;
+              line-height: 122%;
+            }
           }
         }
       }
@@ -420,7 +469,7 @@ export default {
   .section-three {
     padding: 85px 157px;
     @include for-phone-only {
-      padding: 24px 15px;
+      padding: 24px 23px;
     }
     @include for-tablet-only {
       padding: 40px 70px;
@@ -429,7 +478,7 @@ export default {
       display: flex;
       width: 100%;
       @include for-phone-only {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
       @include for-tablet-only {
         flex-direction: column;
@@ -449,6 +498,7 @@ export default {
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
+            display: none;
           }
           span {
             font-size: 14px;
@@ -472,6 +522,10 @@ export default {
             padding-left: 15px;
             padding-bottom: 15px;
             max-width: 360px;
+            @include for-phone-only {
+              font-size: 14px;
+              line-height: 122%;
+            }
           }
         }
       }
@@ -484,10 +538,27 @@ export default {
         @include for-phone-only {
           width: 100%;
           padding-left: 0;
+          display: block;
         }
         @include for-tablet-only {
           width: 100%;
           padding-left: 0;
+        }
+        .phone-title {
+          font-weight: bold;
+          font-size: 36px;
+          margin-bottom: 43px;
+          display: none;
+          @include for-phone-only {
+            font-size: 28px;
+            margin-bottom: 24px;
+            display: block;
+          }
+          span {
+            font-size: 14px;
+            color: #6d6d6d;
+            font-weight: 400;
+          }
         }
         .image-container {
           display: flex;
@@ -500,6 +571,7 @@ export default {
             @include for-phone-only {
               margin-right: 0;
               width: 100%;
+              height: 158px;
             }
             @include for-tablet-only {
               margin-right: 0;
@@ -524,7 +596,7 @@ export default {
     padding: 81px 157px;
     background: #f2fbff;
     @include for-phone-only {
-      padding: 24px 15px;
+      padding: 24px 23px;
     }
     @include for-tablet-only {
       padding: 40px 70px;
@@ -533,7 +605,7 @@ export default {
       display: flex;
       width: 100%;
       @include for-phone-only {
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
       @include for-tablet-only {
         flex-direction: column-reverse;
@@ -549,19 +621,36 @@ export default {
           padding-right: 0;
           margin-top: 24px;
           margin-top: 0;
+          display: block;
         }
         @include for-tablet-only {
           width: 100%;
           margin-right: 0;
           margin-top: 0;
         }
+        .phone-title {
+          font-weight: bold;
+          font-size: 36px;
+          margin-bottom: 43px;
+          text-align: left;
+          display: none;
+          @include for-phone-only {
+            font-size: 28px;
+            margin-bottom: 24px;
+            display: block;
+          }
+          span {
+            font-size: 14px;
+            color: #6d6d6d;
+            font-weight: 400;
+          }
+        }
         .image-container {
           display: flex;
           width: 100%;
           justify-content: flex-end;
           @include for-phone-only {
-            flex-direction: column;
-            row-gap: 15px;
+            column-gap: 11px;
           }
           @include for-tablet-only {
             column-gap: 24px;
@@ -575,7 +664,9 @@ export default {
             width: 322px;
             @include for-phone-only {
               margin-right: 0;
-              width: 100%;
+              width: 159px;
+              height: 158px;
+              padding: 10px;
             }
             @include for-tablet-only {
               margin-right: 0;
@@ -610,6 +701,7 @@ export default {
           @include for-phone-only {
             font-size: 28px;
             margin-bottom: 24px;
+            display: none;
           }
           span {
             font-size: 14px;
@@ -624,6 +716,10 @@ export default {
             font-size: 16px;
             letter-spacing: 0.08em;
             margin-bottom: 15px;
+            @include for-phone-only {
+              font-size: 14px;
+              line-height: 122%;
+            }
           }
         }
         ul {
@@ -641,6 +737,10 @@ export default {
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
+            @include for-phone-only {
+              font-size: 14px;
+              line-height: 122%;
+            }
           }
         }
       }
@@ -649,7 +749,7 @@ export default {
   .section-five {
     padding: 85px 157px;
     @include for-phone-only {
-      padding: 24px 15px;
+      padding: 24px 23px;
     }
     @include for-tablet-only {
       padding: 40px 70px;
@@ -658,7 +758,7 @@ export default {
       display: flex;
       width: 100%;
       @include for-phone-only {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
       @include for-tablet-only {
         flex-direction: column;
@@ -676,8 +776,7 @@ export default {
           font-size: 36px;
           margin-bottom: 43px;
           @include for-phone-only {
-            font-size: 28px;
-            margin-bottom: 24px;
+            display: none;
           }
         }
         ul {
@@ -695,6 +794,10 @@ export default {
             letter-spacing: 0.08em;
             padding-left: 15px;
             padding-bottom: 15px;
+            @include for-phone-only {
+              font-size: 14px;
+              line-height: 122%;
+            }
           }
           :nth-child(4),
           :nth-child(5) {
@@ -710,10 +813,20 @@ export default {
         @include for-phone-only {
           width: 100%;
           margin-left: 0;
+          display: block;
         }
         @include for-tablet-only {
           width: 100%;
           margin-left: 0;
+        }
+        .phone-title {
+          font-weight: bold;
+          font-size: 36px;
+          margin-bottom: 43px;
+          display: none;
+          @include for-phone-only {
+            display: block;
+          }
         }
       }
     }
@@ -747,8 +860,9 @@ export default {
   width: 100%;
 
   @include for-phone-only {
-    flex-direction: column;
-    row-gap: 15px;
+    column-gap: 11px;
+
+    margin-bottom: 27px;
   }
   @include for-tablet-only {
     column-gap: 24px;
@@ -761,7 +875,9 @@ export default {
     height: 322px;
     @include for-phone-only {
       margin-right: 0;
-      width: 100%;
+      width: 159px;
+      height: 158px;
+      padding: 10px;
     }
     @include for-tablet-only {
       margin-right: 0;

@@ -99,13 +99,16 @@ export default {
     text-align: center;
     margin-bottom: 66px;
     @include for-phone-only {
-      padding-top: 110px;
-      margin-bottom: 24px;
+      padding-top: 108px;
+      margin-bottom: 31px;
     }
     h2 {
       font-weight: 500;
       font-size: 24px;
       letter-spacing: 0.035em;
+      @include for-phone-only {
+        font-size: 18px;
+      }
     }
   }
   .card-container {
@@ -116,9 +119,10 @@ export default {
     max-width: 1130px;
     margin: 0 auto;
     @include for-phone-only {
-      padding: 0 15px;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 15px;
+      padding: 0 23px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 360px;
     }
     @include for-tablet-only {
       padding: 0 70px;
@@ -130,7 +134,8 @@ export default {
       max-width: 254px;
       height: 100%;
       @include for-phone-only {
-        max-width: 100%;
+        max-width: 148px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
       }
       .top {
         background: #fbfbfb;
@@ -138,25 +143,43 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        @include for-phone-only {
+          height: 93px;
+        }
         img {
           width: 50px;
           height: 50px;
           object-fit: contain;
+          @include for-phone-only {
+            width: 37px;
+            height: 37px;
+          }
         }
       }
       .bottom {
         background: #fff;
         height: 171px;
         padding: 25px 27px;
+        @include for-phone-only {
+          height: 100px;
+          padding: 8px 14px;
+        }
         p {
           font-weight: 500;
           font-size: 18px;
           line-height: 28px;
           letter-spacing: 0.035em;
+          @include for-phone-only {
+            font-size: 13px;
+            line-height: 20px;
+          }
         }
         ul {
           list-style: none;
           padding: 0;
+          @include for-phone-only {
+            display: none;
+          }
           li {
             font-size: 12px;
           }

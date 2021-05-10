@@ -27,7 +27,9 @@ export default {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @include for-phone-only {
-    height: 385px;
+    background-position: top;
+    background-size: 130% 233px;
+    height: 398px;
   }
   .overlay {
     position: absolute;
@@ -38,6 +40,9 @@ export default {
       rgba(255, 255, 255, 0) 58.19%,
       #ffffff 96.61%
     );
+    @include for-phone-only {
+      height: 233px;
+    }
   }
   .content {
     max-width: 366px;
@@ -45,8 +50,9 @@ export default {
     left: 157px;
     top: 148px;
     @include for-phone-only {
-      left: 15px;
-      top: 120px;
+      left: 23px;
+      top: 143px;
+      max-width: 285px;
     }
     @include for-tablet-only {
       left: 70px;
@@ -60,7 +66,7 @@ export default {
       background-clip: text;
       -webkit-text-fill-color: transparent;
       @include for-phone-only {
-        font-size: 36px;
+        font-size: 32px;
       }
     }
     .appointment-btn {
@@ -72,6 +78,10 @@ export default {
       height: 53px;
       border-radius: 53px;
       transition: 0.3s ease all;
+      @include for-phone-only {
+        width: 168px;
+        height: 45px;
+      }
       &:hover {
         background: $primary;
       }
@@ -80,12 +90,21 @@ export default {
         height: 17px;
         object-fit: contain;
         margin-right: 10px;
+        @include for-phone-only {
+          width: 14px;
+          height: 14px;
+          margin-right: 7px;
+        }
       }
       P {
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.035em;
+        @include for-phone-only {
+          font-size: 14px;
+          line-height: 21px;
+        }
       }
     }
   }

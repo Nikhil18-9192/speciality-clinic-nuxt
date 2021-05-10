@@ -34,13 +34,17 @@ export default {
   background: #f9f9f9;
   text-align: center;
   @include for-phone-only {
-    padding: 30px 15px;
+    padding: 41px 23px 50px 23px;
   }
   .address {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.035em;
     line-height: 24px;
+    @include for-phone-only {
+      font-size: 14px;
+      line-height: 204.5%;
+    }
   }
   .contact {
     display: flex;
@@ -48,6 +52,10 @@ export default {
     margin-top: 19px;
     @include for-phone-only {
       flex-direction: column;
+      margin-top: 0;
+    }
+    .email {
+      margin: 42px 0;
     }
     div {
       font-weight: 500;
@@ -57,6 +65,7 @@ export default {
       @include for-phone-only {
         width: 100%;
         margin-left: 0;
+        font-size: 14px;
       }
       a {
         text-decoration: none;

@@ -95,6 +95,6 @@ a {
 }
 .slide-enter,
 .slide-leave-active {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 </style>
