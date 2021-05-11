@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Be true to your teeth and they wont be false to you!' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       {
         rel: 'stylsheet',
         href:
