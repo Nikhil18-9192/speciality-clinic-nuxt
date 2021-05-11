@@ -7,7 +7,7 @@
       @dismiss="modal = false"
     />
     <div class="route-btn" @click="$router.push('/')">
-      <p>Home</p>
+      <img src="/back.svg" alt="back icon" />
     </div>
     <div class="title">
       <h1>
@@ -103,12 +103,10 @@ export default {
       left: 65px;
     }
 
-    p {
-      margin-left: 7px;
-      font-weight: normal;
-      font-size: 14px;
-      text-align: center;
-      letter-spacing: 0.12em;
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
     }
   }
   .title {

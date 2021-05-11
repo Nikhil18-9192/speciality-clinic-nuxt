@@ -55,7 +55,9 @@ export default {
       margin-top: 0;
     }
     .email {
-      margin: 42px 0;
+      @include for-phone-only {
+        margin: 42px 0;
+      }
     }
     div {
       font-weight: 500;

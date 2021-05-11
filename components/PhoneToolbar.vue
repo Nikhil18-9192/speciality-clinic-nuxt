@@ -43,7 +43,7 @@ export default {
       margin-bottom: 15px;
       a {
         font-weight: 500;
-        font-size: 28px;
+        font-size: 18px;
         &.nuxt-link-exact-active {
           background: linear-gradient(to bottom, #000000 0%, #0079be 100%);
           background-clip: text;
