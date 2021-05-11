@@ -747,9 +747,9 @@ export default {
     }
   }
   .section-five {
-    padding: 85px 157px 40px 157px;
+    padding: 85px 157px 72px 157px;
     @include for-phone-only {
-      padding: 24px 23px;
+      padding: 24px 23px 40px 23px;
     }
     @include for-tablet-only {
       padding: 40px 70px;

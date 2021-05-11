@@ -82,7 +82,7 @@ export default {
     text-align: center;
     margin-bottom: 55px;
     @include for-phone-only {
-      padding-top: 108px;
+      padding-top: 49px;
       margin-bottom: 31px;
     }
     @include for-tablet-only {
