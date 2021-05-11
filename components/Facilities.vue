@@ -59,14 +59,19 @@ export default {
   }
 
   .curve {
-    height: 100px;
+    height: 125px;
     width: 100%;
     background: #fff;
     border-radius: 0 0 50% 50%/ 0 0 100% 100%;
-    transform: scaleX(1.1);
+    transform: scaleX(1.08);
     position: absolute;
     @include for-phone-only {
       transform: scaleX(1.5);
+      height: 80px;
+    }
+    @include for-tablet-only {
+      transform: scaleX(1.2);
+      height: 80px;
     }
   }
   .overlay {
@@ -78,9 +83,9 @@ export default {
     z-index: -1;
   }
   .title {
-    padding-top: 154px;
+    padding-top: 180px;
     text-align: center;
-    margin-bottom: 66px;
+    margin-bottom: 55px;
     @include for-phone-only {
       padding-top: 108px;
       margin-bottom: 31px;
