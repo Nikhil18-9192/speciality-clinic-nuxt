@@ -143,6 +143,7 @@ export default {
           margin: 0 auto;
           position: absolute;
           bottom: 0;
+          border: 0;
         }
         img {
           width: 50px;

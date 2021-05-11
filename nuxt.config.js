@@ -7,7 +7,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'speciality clinic',
+    title: 'Speciality Clinic',
     htmlAttrs: {
       lang: 'en'
     },
