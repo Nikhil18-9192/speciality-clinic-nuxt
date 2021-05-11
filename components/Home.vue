@@ -27,8 +27,8 @@ export default {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @include for-phone-only {
-    background-position: top;
-    background-size: 130% 233px;
+    background-position: 75% 0%;
+    background-size: 155% 225px;
     height: 398px;
   }
   .overlay {
@@ -41,7 +41,7 @@ export default {
       #ffffff 96.61%
     );
     @include for-phone-only {
-      height: 233px;
+      height: 226px;
     }
   }
   .content {
