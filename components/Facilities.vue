@@ -1,18 +1,6 @@
 <template>
   <div id="facilities">
-    <div class="custom-shape-divider-top-1620213850">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z"
-          class="shape-fill"
-        ></path>
-      </svg>
-    </div>
+    <div class="curve"></div>
     <div class="overlay"></div>
     <div class="title">
       <h2>Facilities At Our Clinic</h2>
@@ -65,26 +53,21 @@ export default {
   background-size: cover;
   z-index: -2;
   padding-bottom: 65px;
+  overflow: hidden;
   @include for-phone-only {
     padding-bottom: 40px;
   }
-  .custom-shape-divider-top-1620213850 {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .curve {
+    height: 100px;
     width: 100%;
-    overflow: hidden;
-  }
-
-  .custom-shape-divider-top-1620213850 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 75px;
-  }
-
-  .custom-shape-divider-top-1620213850 .shape-fill {
-    fill: #ffffff;
+    background: #fff;
+    border-radius: 0 0 50% 50%/ 0 0 100% 100%;
+    transform: scaleX(1.1);
+    position: absolute;
+    @include for-phone-only {
+      transform: scaleX(1.5);
+    }
   }
   .overlay {
     position: absolute;
