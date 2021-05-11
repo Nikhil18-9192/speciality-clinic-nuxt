@@ -17,6 +17,7 @@
       >
         <div class="top">
           <img :src="item.icon" :alt="item.name" />
+          <hr />
         </div>
         <div class="bottom">
           <p>{{ item.name }}</p>
@@ -126,6 +127,7 @@ export default {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
       }
       .top {
+        position: relative;
         background: #fbfbfb;
         height: 158px;
         display: flex;
@@ -133,6 +135,14 @@ export default {
         align-items: center;
         @include for-phone-only {
           height: 93px;
+        }
+        hr {
+          background: #e3e3e3;
+          height: 1px;
+          width: 80%;
+          margin: 0 auto;
+          position: absolute;
+          bottom: 0;
         }
         img {
           width: 50px;
