@@ -1,6 +1,5 @@
 <template>
   <div id="facilities">
-    <div class="curve"></div>
     <div class="overlay"></div>
     <div class="title">
       <h2>Facilities At Our Clinic</h2>
@@ -55,26 +54,21 @@ export default {
   z-index: -2;
   padding-bottom: 65px;
   overflow: hidden;
+  clip-path: path(
+    'M0 0C0 0 320.5 83.5005 765 83.5002C1209.5 83.5 1530 0 1530 0V1131H0V0Z'
+  );
   @include for-phone-only {
     padding-bottom: 40px;
+    clip-path: path(
+      'M0 0C0 0 71.7634 28.0003 181 28C290.237 27.9997 376 0 376 0V1290H0V0Z'
+    );
+  }
+  @include for-tablet-only {
+    clip-path: path(
+      'M0 0C0 0 163.473 54.0004 389.5 54C615.527 53.9996 778 0 778 0V1656H0V0Z'
+    );
   }
 
-  .curve {
-    height: 125px;
-    width: 100%;
-    background: #fff;
-    border-radius: 0 0 50% 50%/ 0 0 100% 100%;
-    transform: scaleX(1.08);
-    position: absolute;
-    @include for-phone-only {
-      transform: scaleX(1.5);
-      height: 80px;
-    }
-    @include for-tablet-only {
-      transform: scaleX(1.2);
-      height: 80px;
-    }
-  }
   .overlay {
     position: absolute;
     width: 100%;
@@ -84,12 +78,15 @@ export default {
     z-index: -1;
   }
   .title {
-    padding-top: 180px;
+    padding-top: 148px;
     text-align: center;
     margin-bottom: 55px;
     @include for-phone-only {
       padding-top: 108px;
       margin-bottom: 31px;
+    }
+    @include for-tablet-only {
+      padding-top: 85px;
     }
     h2 {
       font-weight: 500;

@@ -65,7 +65,7 @@ export default {
   .route-btn {
     display: flex;
     position: fixed;
-    top: 110px;
+    top: 80px;
     left: 100px;
     justify-content: space-between;
     align-items: center;
@@ -81,8 +81,8 @@ export default {
     }
 
     img {
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
       object-fit: contain;
     }
   }
