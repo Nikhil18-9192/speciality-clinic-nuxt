@@ -193,7 +193,7 @@ export default {
     text-align: center;
     padding-bottom: 80px;
     @include for-phone-only {
-      padding-top: 24px;
+      padding-top: 0;
       padding-bottom: 40px;
     }
     @include for-tablet-only {

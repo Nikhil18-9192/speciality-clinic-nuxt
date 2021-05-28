@@ -15,6 +15,12 @@
     </div>
     <div class="copyright">
       <p>Copyright 2021 . All Rights Reserved</p>
+      <p class="formec">
+        Designed with 💙 by
+        <a href="https://formecmedia.com/" target="_blank" rel="noopener">
+          Formec Media.</a
+        >
+      </p>
     </div>
   </div>
 </template>
@@ -89,6 +95,9 @@ export default {
       font-weight: 500;
       font-size: 10px;
       letter-spacing: 0.035em;
+    }
+    .formec {
+      margin-top: 12px;
     }
   }
 }
