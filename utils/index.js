@@ -53,7 +53,6 @@ const treatments = [
 
 
 
-const galleryImages = [{ image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" },]
 
 const implantsImages = [{ image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" }, { image: '/beautiful-young-woman.jpg', title: "Image title" }, { image: '/esthetic2.jpg', title: "Image title" }, { image: '/esthetic1.jpg', title: "Image title" }, { image: '/woman-looking-mirror.jpg', title: "Image title" },]
 
@@ -106,4 +105,4 @@ const gumTreatments = [
 
 
 
-export { menus, facelities, treatments, galleryImages, implants, ethestic, rootCanel, orthodontics, gumTreatments, implantsImages, gumTreatmentsImages, orthodonticsImages, estheticImages, rootCanelImages }
+export { menus, facelities, treatments, implants, ethestic, rootCanel, orthodontics, gumTreatments, implantsImages, gumTreatmentsImages, orthodonticsImages, estheticImages, rootCanelImages }

@@ -6,44 +6,130 @@
       :images="images"
       @dismiss="modal = false"
     />
-    <div class="route-btn" @click="$router.push('/')">
+    <div class="route-btn" @click="$router.push('/#services')">
       <img src="/back.svg" alt="back icon" />
     </div>
-    <div class="title">
-      <h1>Gallery</h1>
+    <div id="implants">
+      <div class="title">
+        <h1>Implants</h1>
+      </div>
+      <div class="image-container">
+        <div
+          class="image"
+          v-for="(item, i) in implantsImages"
+          :key="i"
+          @click="viewImage(i, implantsImages)"
+        >
+          <img :src="item.image" alt="" />
+          <h4 class="image-title">{{ item.title }}</h4>
+        </div>
+      </div>
     </div>
-    <div class="image-container">
-      <div
-        class="image"
-        v-for="(item, i) in images"
-        :key="i"
-        @click="viewImage(i)"
-      >
-        <img :src="item.image" alt="" />
-        <h4 class="image-title">{{ item.title }}</h4>
+    <div id="esthetic">
+      <div class="title">
+        <h1>Esthetic Treatments</h1>
+      </div>
+      <div class="image-container">
+        <div
+          class="image"
+          v-for="(item, i) in estheticImages"
+          :key="i"
+          @click="viewImage(i, estheticImages)"
+        >
+          <img :src="item.image" alt="" />
+          <h4 class="image-title">{{ item.title }}</h4>
+        </div>
+      </div>
+    </div>
+    <div id="rootCanal">
+      <div class="title">
+        <h1>Root Canal Treatment</h1>
+      </div>
+      <div class="image-container">
+        <div
+          class="image"
+          v-for="(item, i) in rootCanelImages"
+          :key="i"
+          @click="viewImage(i, rootCanelImages)"
+        >
+          <img :src="item.image" alt="" />
+          <h4 class="image-title">{{ item.title }}</h4>
+        </div>
+      </div>
+    </div>
+    <div id="orthodontics">
+      <div class="title">
+        <h1>Orthodontics</h1>
+      </div>
+      <div class="image-container">
+        <div
+          class="image"
+          v-for="(item, i) in orthodonticsImages"
+          :key="i"
+          @click="viewImage(i, orthodonticsImages)"
+        >
+          <img :src="item.image" alt="" />
+          <h4 class="image-title">{{ item.title }}</h4>
+        </div>
+      </div>
+    </div>
+    <div id="gumTreatment">
+      <div class="title">
+        <h1>Gum Treatments</h1>
+      </div>
+      <div class="image-container">
+        <div
+          class="image"
+          v-for="(item, i) in gumTreatmentsImages"
+          :key="i"
+          @click="viewImage(i, gumTreatmentsImages)"
+        >
+          <img :src="item.image" alt="" />
+          <h4 class="image-title">{{ item.title }}</h4>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { galleryImages } from '@/utils'
+import {
+  implantsImages,
+  estheticImages,
+  rootCanelImages,
+  orthodonticsImages,
+  gumTreatmentsImages,
+} from '@/utils'
 export default {
   name: 'GalleryPage',
   data() {
     return {
       selectedIndex: 0,
       modal: false,
+      images: [],
     }
   },
   computed: {
-    images() {
-      return galleryImages
+    implantsImages() {
+      return implantsImages
+    },
+    estheticImages() {
+      return estheticImages
+    },
+    rootCanelImages() {
+      return rootCanelImages
+    },
+    orthodonticsImages() {
+      return orthodonticsImages
+    },
+    gumTreatmentsImages() {
+      return gumTreatmentsImages
     },
   },
   methods: {
-    viewImage(i) {
+    viewImage(i, images) {
       this.selectedIndex = i
+      this.images = images
       this.modal = true
     },
   },

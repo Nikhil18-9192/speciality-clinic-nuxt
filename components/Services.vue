@@ -18,7 +18,7 @@
             </li>
           </ul>
 
-          <nuxt-link class="gallery-btn" to="/gallery/implants"
+          <nuxt-link class="gallery-btn" to="/gallery/#implants"
             >Images</nuxt-link
           >
         </div>
@@ -62,7 +62,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/esthetic-treatments"
+          <nuxt-link class="gallery-btn" to="/gallery/#esthetic"
             >Images</nuxt-link
           >
         </div>
@@ -82,7 +82,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/root-canal"
+          <nuxt-link class="gallery-btn" to="/gallery/#rootCanal"
             >Images</nuxt-link
           >
         </div>
@@ -133,7 +133,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/orthodontics"
+          <nuxt-link class="gallery-btn" to="/gallery/#orthodontics"
             >Images</nuxt-link
           >
         </div>
@@ -153,7 +153,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/gum-treatments"
+          <nuxt-link class="gallery-btn" to="/gallery/#gumTreatment"
             >Images</nuxt-link
           >
         </div>
