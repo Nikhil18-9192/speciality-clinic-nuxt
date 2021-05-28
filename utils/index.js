@@ -1,9 +1,9 @@
 const menus = [
-    { name: 'Services', path: '#services' },
-    { name: 'Facilities', path: '#facilities' },
-    { name: 'About', path: '#about' },
+    { name: 'Services', path: '/#services' },
+    { name: 'Facilities', path: '/#facilities' },
+    { name: 'About', path: '/#about' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '#footer' },
+    { name: 'Contact', path: '/#footer' },
 ]
 
 const facelities = [

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Toolbar v-if="$route.path == '/'" />
+    <Toolbar />
     <div class="whatsapp-link">
       <a href="https://api.whatsapp.com/send?text=Hello!&phone=+919673310995">
         <img src="/whatsapp.svg" alt="whatsapp icon" />
@@ -14,7 +14,7 @@
       class="menuModal"
       @click="$store.commit('toggleMenuState')"
     ></div>
-    <MobileNav v-if="$route.path == '/'" />
+    <MobileNav />
     <Nuxt />
     <Footer />
   </div>

@@ -9,7 +9,7 @@
     <div class="route-btn" @click="$router.push('/#services')">
       <img src="/back.svg" alt="back icon" />
     </div>
-    <div id="implants">
+    <div class="section" id="implants">
       <div class="title">
         <h1>Implants</h1>
       </div>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div id="esthetic">
+    <div class="section" id="esthetic">
       <div class="title">
         <h1>Esthetic Treatments</h1>
       </div>
@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <div id="rootCanal">
+    <div class="section" id="rootCanal">
       <div class="title">
         <h1>Root Canal Treatment</h1>
       </div>
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <div id="orthodontics">
+    <div class="section" id="orthodontics">
       <div class="title">
         <h1>Orthodontics</h1>
       </div>
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-    <div id="gumTreatment">
+    <div class="section" id="gumTreatment">
       <div class="title">
         <h1>Gum Treatments</h1>
       </div>
@@ -151,7 +151,7 @@ export default {
   .route-btn {
     display: flex;
     position: fixed;
-    top: 80px;
+    top: 120px;
     left: 100px;
     justify-content: space-between;
     align-items: center;
@@ -172,9 +172,14 @@ export default {
       object-fit: contain;
     }
   }
+  .section {
+    margin-bottom: 55px;
+  }
+  #implants {
+    margin-top: 110px;
+  }
   .title {
     text-align: center;
-    padding-top: 68px;
     padding-bottom: 80px;
     @include for-phone-only {
       padding-top: 24px;
