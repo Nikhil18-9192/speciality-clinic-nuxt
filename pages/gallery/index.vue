@@ -9,7 +9,8 @@
     <div class="route-btn" @click="$router.push('/#services')">
       <img src="/back.svg" alt="back icon" />
     </div>
-    <div class="section" id="implants">
+    <div class="section">
+      <span class="anchor" id="implants"></span>
       <div class="title">
         <h1>Implants</h1>
       </div>
@@ -25,7 +26,8 @@
         </div>
       </div>
     </div>
-    <div class="section" id="esthetic">
+    <div class="section">
+      <span class="anchor" id="esthetic"></span>
       <div class="title">
         <h1>Esthetic Treatments</h1>
       </div>
@@ -41,7 +43,8 @@
         </div>
       </div>
     </div>
-    <div class="section" id="rootCanal">
+    <div class="section">
+      <span class="anchor" id="rootCanal"></span>
       <div class="title">
         <h1>Root Canal Treatment</h1>
       </div>
@@ -57,7 +60,8 @@
         </div>
       </div>
     </div>
-    <div class="section" id="orthodontics">
+    <div class="section">
+      <span class="anchor" id="orthodontics"></span>
       <div class="title">
         <h1>Orthodontics</h1>
       </div>
@@ -73,7 +77,8 @@
         </div>
       </div>
     </div>
-    <div class="section" id="gumTreatment">
+    <div class="section">
+      <span class="anchor" id="gumTreatment"></span>
       <div class="title">
         <h1>Gum Treatments</h1>
       </div>
@@ -174,9 +179,15 @@ export default {
   }
   .section {
     margin-bottom: 55px;
+    .anchor {
+      display: block;
+      height: 92px;
+      margin-top: -92px;
+      visibility: hidden;
+    }
   }
   #implants {
-    margin-top: 110px;
+    margin-top: 25px;
   }
   .title {
     text-align: center;
@@ -199,7 +210,7 @@ export default {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 60px;
-    margin-bottom: 70px;
+    // margin-bottom: 70px;
     @include for-phone-only {
       grid-template-columns: auto;
       gap: 30px;
