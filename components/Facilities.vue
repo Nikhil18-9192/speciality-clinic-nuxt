@@ -60,7 +60,7 @@ export default {
   @include for-phone-only {
     padding-bottom: 40px;
     clip-path: path(
-      'M0 0C0 0 71.7634 28.0003 181 28C290.237 27.9997 376 0 376 0V1290H0V0Z'
+      'M0 0C0 0 71.7634 28.0003 181 28C290.237 27.9997 425 0 425 0V1290H0V0Z'
     );
   }
   @include for-tablet-only {
