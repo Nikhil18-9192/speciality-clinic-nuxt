@@ -6,6 +6,7 @@
       :images="images"
       @dismiss="modal = false"
     />
+
     <div class="route-btn" @click="$router.push('/#services')">
       <img src="/back.svg" alt="back icon" />
     </div>
@@ -112,8 +113,19 @@ export default {
       selectedIndex: 0,
       modal: false,
       images: [],
+      fmr: [],
     }
   },
+  mounted() {
+    this.fmr = this.importAll(
+      require.context(
+        '~/assets/images/implants/fmr-implant-pro',
+        false,
+        /\.(png|jpe?g|svg)$/
+      )
+    )
+  },
+
   computed: {
     implantsImages() {
       return implantsImages
@@ -136,6 +148,10 @@ export default {
       this.selectedIndex = i
       this.images = images
       this.modal = true
+    },
+
+    importAll(r) {
+      return r.keys().map(r)
     },
   },
 }

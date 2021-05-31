@@ -55,7 +55,7 @@ export default {
   position: fixed;
   top: 33px;
   left: 0;
-  z-index: 999;
+  z-index: 2000;
   width: 100%;
   transition: 0.3s ease all;
   @include for-phone-only {
