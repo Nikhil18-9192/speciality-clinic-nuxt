@@ -1,7 +1,27 @@
 <template>
   <div id="section-gallery">
+    <GalleryModal
+      v-if="modal"
+      :image="images[selectedIndex]"
+      @dismiss="modal = false"
+      @next="
+        selectedIndex < images.length - 1
+          ? selectedIndex++
+          : (selectedIndex = 0)
+      "
+      @prev="
+        selectedIndex > 0
+          ? selectedIndex--
+          : (selectedIndex = images.length - 1)
+      "
+    />
     <div class="image-container">
-      <div class="image" v-for="img in images" :key="img">
+      <div
+        class="image"
+        v-for="(img, i) in images"
+        :key="img"
+        @click="viewImage(i)"
+      >
         <img :src="img" />
       </div>
     </div>
@@ -12,6 +32,17 @@
 export default {
   name: 'SectionGallery',
   props: ['images'],
+  data() {
+    return {
+      selectedIndex: 0,
+      modal: false,
+    }
+  },
+  methods: {
+    viewImage(i) {
+      this.modal = true
+    },
+  },
 }
 </script>
 
@@ -38,7 +69,6 @@ export default {
       height: 100%;
       transition: 0.3s ease all;
       margin-bottom: 24px;
-
       cursor: pointer;
       @include for-big-desktop-up {
         max-width: 449px;
@@ -50,6 +80,7 @@ export default {
         object-fit: cover;
         border-radius: 4px;
         transition: 0.3s ease all;
+        background: #f5f5f5;
         &:hover {
           transform: scale(1.08);
           filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.26));

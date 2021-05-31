@@ -3,12 +3,13 @@
     <div class="spinner">
       <span
         >Showing images for
-        <b :class="spinner ? 'active' : ''" @click="toggle">{{ value }}</b>
-        <img
-          :style="spinner ? 'transform:rotate(-180deg)' : ''"
-          src="/arrow-down.svg"
-          alt="down arrow"
-        />
+        <b :class="spinner ? 'active' : ''" @click="toggle"
+          >{{ value }}
+          <img
+            :style="spinner ? 'transform:rotate(-180deg)' : ''"
+            src="/arrow-down.svg"
+            alt="down arrow"
+        /></b>
       </span>
       <ul class="list" :class="[{ expanded: spinner }]">
         <li v-for="option in options" :key="option" @click="onSelect(option)">

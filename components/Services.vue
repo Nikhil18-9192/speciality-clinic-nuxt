@@ -18,9 +18,7 @@
             </li>
           </ul>
 
-          <nuxt-link class="gallery-btn" to="/gallery/#implants"
-            >Images</nuxt-link
-          >
+          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
         </div>
         <div class="right">
           <h2 class="phone-title">
@@ -62,9 +60,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/#esthetic"
-            >Images</nuxt-link
-          >
+          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
         </div>
       </div>
     </div>
@@ -82,9 +78,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/#rootCanal"
-            >Images</nuxt-link
-          >
+          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
         </div>
         <div class="right">
           <h2 class="phone-title">Root Canal Treatment <span>(RCT)</span></h2>
@@ -133,9 +127,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/#orthodontics"
-            >Images</nuxt-link
-          >
+          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
         </div>
       </div>
     </div>
@@ -153,9 +145,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery/#gumTreatment"
-            >Images</nuxt-link
-          >
+          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
         </div>
         <div class="right">
           <h2 class="phone-title">Gum Treatments</h2>

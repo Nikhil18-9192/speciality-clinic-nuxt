@@ -194,33 +194,33 @@ const getSrcForCategory = (category) => {
       )
       break
 
-    case galleryCategories[6]:
+    case galleryCategories[7]:
       return require.context(
         '~/assets/images/implants/Tooth Supported FMR',
         true
       )
       break
 
-    case galleryCategories[6]:
+    case galleryCategories[8]:
       return require.context(
         '~/assets/images/Esthetic Treatments/Diestema closure',
         true
       )
       break
 
-    case galleryCategories[6]:
+    case galleryCategories[9]:
       return require.context(
         '~/assets/images/Esthetic Treatments/Zirconia bridge',
         true
       )
       break
 
-    case galleryCategories[6]:
+    case galleryCategories[10]:
       return require.context('~/assets/images/Root Canal Treatment', true)
       break
 
     default:
-      return ''
+      return require.context('~/assets/images/clinic', true)
       break
   }
 }

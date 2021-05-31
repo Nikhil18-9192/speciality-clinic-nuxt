@@ -1,17 +1,13 @@
 <template>
   <div id="gallery-modal" @click="$emit('dismiss')">
+    <div class="close" @click.stop="$emit('dismiss')">Close</div>
     <div class="images-container" @click.stop="">
-      <div
-        class="image"
-        v-for="(item, i) in images"
-        v-show="i == currentSlide"
-        :key="i"
-      >
-        <img :src="item.image" alt="" />
+      <div class="image">
+        <img :src="image" />
       </div>
       <div class="control-btn">
-        <button class="btn" @click="prev">prev</button>
-        <button class="btn" @click="next">next</button>
+        <button class="btn" @click="$emit('prev')">prev</button>
+        <button class="btn" @click="$emit('next')">next</button>
       </div>
     </div>
   </div>
@@ -20,25 +16,12 @@
 <script>
 export default {
   name: 'GalleryModal',
-  props: ['index', 'images'],
+  props: ['image'],
   data() {
-    return {
-      currentSlide: 0,
-    }
+    return {}
   },
-  mounted() {
-    this.currentSlide = this.index
-  },
-  methods: {
-    prev() {
-      this.currentSlide <= 0 ? (this.currentSlide = 0) : this.currentSlide--
-    },
-    next() {
-      this.currentSlide >= this.images.length - 1
-        ? (this.currentSlide = this.images.length - 1)
-        : this.currentSlide++
-    },
-  },
+  mounted() {},
+  methods: {},
 }
 </script>
 
@@ -55,22 +38,28 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .close {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    cursor: pointer;
+    z-index: 111;
+  }
   .images-container {
     width: 80%;
     height: 80%;
     @include for-phone-only {
-      width: 95%;
-      height: 350px;
+      height: 80vh;
     }
     .image {
       width: 100%;
       height: 100%;
-      border: 10px solid $primary;
-      border-radius: 4px;
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center;
       }
     }
   }
