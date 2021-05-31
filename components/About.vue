@@ -94,13 +94,20 @@ export default {
     .treatment {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      @include for-phone-only {
+        flex-direction: column;
+        align-items: center;
+      }
       .icon {
         padding-right: 52px;
-        @include for-phone-only {
-          padding-right: 29px;
-        }
+
         @include for-tablet-only {
           padding-right: 20px;
+        }
+        @include for-phone-only {
+          padding-right: 0;
         }
         img {
           width: 66px;
@@ -127,6 +134,7 @@ export default {
         @include for-phone-only {
           font-size: 14px;
           line-height: 21px;
+          text-align: center;
         }
       }
     }

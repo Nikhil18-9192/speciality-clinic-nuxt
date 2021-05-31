@@ -45,6 +45,8 @@ export default {
 </script>
 <style lang="scss">
 html {
+  width: 100%;
+  position: relative;
   font-family: 'Satoshi', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
