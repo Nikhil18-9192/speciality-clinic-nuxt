@@ -61,7 +61,6 @@ export default {
   }
 
   .spinner {
-    display: inline;
     position: relative;
     box-sizing: border-box;
     z-index: 1000;
@@ -90,7 +89,8 @@ export default {
       min-width: 300px;
       transition: 0.2s ease-in-out all;
       @include for-phone-only {
-        min-width: 150px;
+        min-width: 250px;
+        top: 110%;
       }
       li {
         padding: 16px;
