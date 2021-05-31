@@ -20,6 +20,10 @@ export default {
         content:
           'The Speciality Dental Care & Implant Centre is the most advanced dental care & implant center in Kolhapur provides Dental Implants, Esthetic Treatments, Root Canal Treatment, Orthodentics, Gum Treatments.',
       },
+      {
+        hid: 'og:image',
+        content: '/favicon.png',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },

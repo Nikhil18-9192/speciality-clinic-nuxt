@@ -33,6 +33,7 @@ export default {
     }
   },
   mounted() {
+    this.selection = this.$store.getters.getGalleryType
     this.refreshGallery()
   },
   methods: {
@@ -53,6 +54,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   padding: 0 157px;
+  overflow: hidden;
   @include for-phone-only {
     padding: 0 15px;
     padding-top: 80px;

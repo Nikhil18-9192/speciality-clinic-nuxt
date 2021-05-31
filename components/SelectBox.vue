@@ -88,8 +88,10 @@ export default {
       box-sizing: border-box;
       max-width: 300px;
       min-width: 300px;
-
       transition: 0.2s ease-in-out all;
+      @include for-phone-only {
+        min-width: 150px;
+      }
       li {
         padding: 16px;
         box-sizing: border-box;

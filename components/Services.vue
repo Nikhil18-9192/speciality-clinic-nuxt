@@ -11,14 +11,14 @@
     >
       <div class="container">
         <div class="left">
-          <h2>Implants <span>-The new Era of Dentistry</span></h2>
+          <h2>Implants <span>-The new Eta of Dentistry</span></h2>
           <ul>
             <li v-for="(item, i) in implants" :key="i">
               {{ item }}
             </li>
           </ul>
 
-          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
+          <div class="gallery-btn" @click="showGallery(1)">Images</div>
         </div>
         <div class="right">
           <h2 class="phone-title">
@@ -60,7 +60,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
+          <div class="gallery-btn" @click="showGallery(8)">Images</div>
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
+          <div class="gallery-btn" @click="showGallery(1)">Images</div>
         </div>
         <div class="right">
           <h2 class="phone-title">Root Canal Treatment <span>(RCT)</span></h2>
@@ -127,7 +127,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
+          <div class="gallery-btn" @click="showGallery(0)">Images</div>
         </div>
       </div>
     </div>
@@ -145,7 +145,7 @@
               {{ item }}
             </li>
           </ul>
-          <nuxt-link class="gallery-btn" to="/gallery">Images</nuxt-link>
+          <div class="gallery-btn" @click="showGallery(0)">Images</div>
         </div>
         <div class="right">
           <h2 class="phone-title">Gum Treatments</h2>
@@ -167,10 +167,16 @@ import {
   orthodontics,
   ethestic,
   rootCanel,
+  galleryCategories,
 } from '@/utils'
 export default {
   name: 'ServicesComponent',
-
+  methods: {
+    showGallery(i) {
+      this.$store.commit('SET_GALLERY_TYPE', galleryCategories[i])
+      this.$router.push('/gallery')
+    },
+  },
   computed: {
     lists() {
       return servicesList
@@ -189,6 +195,9 @@ export default {
     },
     gumTreatments() {
       return gumTreatments
+    },
+    galleryCategories() {
+      return galleryCategories
     },
   },
 }
