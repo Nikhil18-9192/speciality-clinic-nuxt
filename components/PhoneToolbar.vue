@@ -40,10 +40,10 @@ export default {
     margin-top: 90px;
     margin-left: 24px;
     li {
-      margin-bottom: 15px;
+      margin-bottom: 24px;
       a {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 22px;
         &.nuxt-link-exact-active {
           background: linear-gradient(to bottom, #000000 0%, #0079be 100%);
           background-clip: text;
