@@ -2,7 +2,7 @@
   <div id="footer">
     <p class="address">
       609 / 2 / A, E - Ward, Rishab Pride, 1st Floor, Opp. Metro Hospital,
-      Shahupuri 2nd Lane, Kolhapur -410 001
+      Shahupuri 2nd Lane, Kolhapur - 410 001
     </p>
     <div class="contact">
       <div class="email">
@@ -12,6 +12,14 @@
         For Appointment :
         <a class="number" href="tel:9673310995">967 331 0995</a>
       </div>
+    </div>
+    <div class="social">
+      <a href="/" rel="noreferrer"
+        ><img src="/instagram.svg" alt="instagram icon" />
+      </a>
+      <a href="/" rel="noreferrer"
+        ><img src="/fb.svg" alt="instagram icon"
+      /></a>
     </div>
     <div class="copyright">
       <p>Copyright 2021 . All Rights Reserved</p>
@@ -50,6 +58,8 @@ export default {
     @include for-phone-only {
       font-size: 14px;
       line-height: 204.5%;
+      text-align: center;
+      padding: 0 24px;
     }
   }
   .contact {
@@ -83,10 +93,24 @@ export default {
       }
     }
   }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+
+    img {
+      margin: 0 4px;
+      width: 48px;
+      height: 48px;
+      padding: 6px;
+    }
+  }
   .copyright {
     margin-top: 107px;
     @include for-phone-only {
-      margin-top: 50px;
+      margin-top: 24px;
     }
     @include for-tablet-only {
       margin-top: 65px;
