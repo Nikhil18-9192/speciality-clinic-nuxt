@@ -2,7 +2,7 @@
   <div>
     <Toolbar />
     <div class="whatsapp-link">
-      <a href="https://api.whatsapp.com/send?text=Hello!&phone=+919673310995">
+      <a href="https://api.whatsapp.com/send?text=Hello!&phone=+919604685059">
         <img src="/whatsapp.svg" alt="whatsapp icon" />
       </a>
     </div>
