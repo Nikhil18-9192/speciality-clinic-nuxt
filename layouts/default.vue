@@ -47,7 +47,7 @@ export default {
 html {
   width: 100%;
   position: relative;
-  font-family: 'Satoshi', sans-serif;
+  font-family: 'Be Vietnam', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

@@ -30,7 +30,7 @@ export default {
       {
         rel: 'stylsheet',
         href:
-          'https://api.fontshare.com/css?f[]=satoshi@300,400,500,700&display=swap',
+          'https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;600;700&display=swap',
       },
     ],
   },
