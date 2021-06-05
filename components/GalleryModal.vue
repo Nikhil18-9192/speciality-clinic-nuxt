@@ -55,6 +55,9 @@ export default {
     .image {
       width: 100%;
       height: 100%;
+      @include for-phone-only {
+        height: 500px;
+      }
       img {
         width: 100%;
         height: 100%;
