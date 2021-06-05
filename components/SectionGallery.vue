@@ -40,6 +40,7 @@ export default {
   },
   methods: {
     viewImage(i) {
+      this.selectedIndex = i
       this.modal = true
     },
   },

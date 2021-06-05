@@ -45,6 +45,7 @@ export default {
     right: 24px;
     cursor: pointer;
     z-index: 111;
+    color: $accent;
   }
   .images-container {
     width: 80%;
