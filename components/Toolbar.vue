@@ -104,6 +104,7 @@ export default {
             font-weight: 500;
             font-size: 16px;
             transition: 0.3s ease all;
+            font-family: 'Be Vietnam', sans-serif;
             &:hover {
               background: linear-gradient(to bottom, #000000 0%, #0079be 100%);
               background-clip: text;
