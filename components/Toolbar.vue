@@ -80,7 +80,9 @@ export default {
       width: 165px;
       height: 60px;
       transition: 0.3s ease all;
-      background: rgba(255, 255, 255, 0.2);
+      // background: rgba(255, 255, 255, 0.2);
+      // padding: 8px;
+      // box-sizing: content-box;
     }
     .nav-menu {
       padding-left: 92px;
@@ -138,7 +140,9 @@ export default {
   width: 135px;
   height: 50px;
   transition: 0.3s ease all;
-  background: rgba(255, 255, 255, 0.2);
+  // background: rgba(255, 255, 255, 0.2);
+  // padding: 8px;
+  // box-sizing: content-box;
 }
 .scroll-up {
   align-items: center;
