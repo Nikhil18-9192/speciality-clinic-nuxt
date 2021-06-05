@@ -77,8 +77,8 @@ export default {
       }
     }
     .logo {
-      width: 148px;
-      height: 54px;
+      width: 165px;
+      height: 60px;
       transition: 0.3s ease all;
     }
     .nav-menu {
@@ -133,8 +133,8 @@ export default {
   }
 }
 .scroll-down {
-  width: 120px;
-  height: 44px;
+  width: 135px;
+  height: 50px;
   transition: 0.3s ease all;
 }
 .scroll-up {

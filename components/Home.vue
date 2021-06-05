@@ -2,7 +2,7 @@
   <div id="home">
     <div class="overlay"></div>
     <div class="content">
-      <h1>Be true to your teeth and they won't be false to you!</h1>
+      <h1>A better life starts with a beautiful smile.</h1>
       <a class="appointment-btn" href="tel:9673310995">
         <img src="/phone.svg" alt="phone icon" />
         <p>Get Appointment</p>
