@@ -91,11 +91,11 @@ export default {
           font-weight: 500;
           font-size: 18px;
           line-height: 26px;
-          margin-bottom: 14px;
+          margin-bottom: 12px;
         }
         p {
           font-weight: 300;
-          font-size: 10px;
+          font-size: 12px;
           line-height: 15px;
           color: #0079be;
         }
