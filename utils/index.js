@@ -4,6 +4,7 @@ const menus = [
   { name: 'About', path: '/#about' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact', path: '/#footer' },
+  { name: 'Team', path: '/team' },
 ]
 
 const facelities = [
@@ -225,6 +226,12 @@ const getSrcForCategory = (category) => {
   }
 }
 
+const team = [
+  { name: 'Dr. Digvijay Patil', education: 'MDS - Orthodontics and Dentofacial Orthopaedics, BDS Dentist, Orthodontist, Dentofacial Orthopedist', src: '/t1.jpg' },
+  { name: 'Dr. Digvijay Patil', education: 'MDS - Orthodontics and Dentofacial Orthopaedics, BDS Dentist, Orthodontist, Dentofacial Orthopedist', src: '/t2.jpg' },
+  { name: 'Dr. Digvijay Patil', education: 'MDS - Orthodontics and Dentofacial Orthopaedics, BDS Dentist, Orthodontist, Dentofacial Orthopedist', src: '/t3.jpg' },
+]
+
 export {
   getSrcForCategory,
   galleryCategories,
@@ -241,4 +248,5 @@ export {
   orthodonticsImages,
   estheticImages,
   rootCanelImages,
+  team
 }
