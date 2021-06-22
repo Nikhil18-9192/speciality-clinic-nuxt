@@ -70,13 +70,15 @@ export default {
       position: relative;
       width: 300px;
       height: 360px;
+      margin-bottom: 64px;
       @include for-phone-only {
         margin: 0 auto;
       }
       img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
+        object-position: center;
       }
       .desc {
         position: absolute;

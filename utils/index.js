@@ -227,9 +227,34 @@ const getSrcForCategory = (category) => {
 }
 
 const team = [
-  { name: 'Dr. Digvijay Patil', education: 'MDS - Orthodontics and Dentofacial Orthopaedics, BDS Dentist, Orthodontist, Dentofacial Orthopedist', src: '/t1.jpg' },
-  { name: 'Dr. Digvijay Patil', education: 'MDS - Orthodontics and Dentofacial Orthopaedics, BDS Dentist, Orthodontist, Dentofacial Orthopedist', src: '/t2.jpg' },
-  { name: 'Dr. Digvijay Patil', education: 'MDS - Orthodontics and Dentofacial Orthopaedics, BDS Dentist, Orthodontist, Dentofacial Orthopedist', src: '/t3.jpg' },
+  {
+    name: 'Dr. Digvijay Patil',
+    education: 'BDS, MDS ( Prosthodontics) Fellow in Implantology (ISOI)',
+    src: '/t1.jpeg',
+  },
+
+  {
+    name: 'Dr. Deepali D Patil',
+    education: 'BDS (RGUHS)',
+    src: '/t1-1.jpg',
+  },
+
+  {
+    name: 'Dr. Vishal Panjwani',
+    education: 'BDS, MDS(Periodontics)',
+    src: '/t3-1.jpg',
+  },
+  {
+    name: 'Dr. Indraneel Chavan',
+    education: 'BDS, MDS (Orthodontics)',
+    src: '/t2.jpeg',
+  },
+  {
+    name: 'Dr. Nilam Pawar',
+    education: 'BDS, MDS(Endodontics)',
+    src:
+      'https://delmarbehavioralhealth.com/wp-content/uploads/2017/09/Female-Avatar.png',
+  },
 ]
 
 export {
@@ -248,5 +273,5 @@ export {
   orthodonticsImages,
   estheticImages,
   rootCanelImages,
-  team
+  team,
 }
